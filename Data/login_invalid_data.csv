@@ -1,0 +1,7 @@
+scenario,username,password,expectedMessage
+Username tidak terdaftar,user_tidak_terdaftar_999,Password123,Invalid username or password
+Password salah untuk username valid,{GLOBAL_USERNAME},password_salah_123,Invalid username or password
+Username salah dengan password valid,user_salah_123,{GLOBAL_PASSWORD},Invalid username or password
+Username dan password salah,abc_xyz_000,qwerty000,Invalid username or password
+Username kosong,{EMPTY},{GLOBAL_PASSWORD},{EMPTY}
+Password kosong,{GLOBAL_USERNAME},{EMPTY},{EMPTY}

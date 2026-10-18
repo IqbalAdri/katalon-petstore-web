@@ -1,0 +1,546 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_PetStore_Regression,Chrome 155.0.8059.84,Regression suite JPetStore Web: menjalankan seluruh test case (positive & negative) termasuk data-driven test.,,18-10-2026 21:56:37,18-10-2026 22:00:38,4m - 0.646s,PASSED
+,,,,,,,
+Start listener action : beforeTestSuite,Chrome 155.0.8059.84,,,18-10-2026 21:56:37,18-10-2026 21:56:38,0.606s,PASSED
+,,,,,,,
+Test Cases/Authentication/TC03_Register_New_Account,Chrome 155.0.8059.84,"[POSITIVE][DYNAMIC DATA] Registrasi akun baru dengan data yang di-generate otomatis (username unik per eksekusi), verifikasi auto-login, logout, lalu login ulang dengan akun baru.",,18-10-2026 21:57:01,18-10-2026 21:57:21,20.394s,PASSED
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:01,18-10-2026 21:57:01,0.010s,PASSED
+account = petstore.DataGenerator.generateAccountData(),Chrome 155.0.8059.84,Generate data akun baru (dynamic data),,18-10-2026 21:57:01,18-10-2026 21:57:01,0.010s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:57:01,18-10-2026 21:57:03,2.351s,PASSED
+"click(findTestObject(""Page_Header/link_SignIn""))",Chrome 155.0.8059.84,Step 1: buka form registrasi melalui Sign In > Register Now!,,18-10-2026 21:57:03,18-10-2026 21:57:04,0.536s,PASSED
+"click(findTestObject(""Page_Login/link_RegisterNow""))",Chrome 155.0.8059.84,,,18-10-2026 21:57:04,18-10-2026 21:57:05,0.753s,PASSED
+"verifyElementVisible(findTestObject(""Page_Register/btn_SaveAccount""))",Chrome 155.0.8059.84,,,18-10-2026 21:57:05,18-10-2026 21:57:05,0.489s,PASSED
+"setText(findTestObject(""Page_Register/input_UserId""), username)",Chrome 155.0.8059.84,Step 2: isi User Information,,18-10-2026 21:57:05,18-10-2026 21:57:06,0.595s,PASSED
+"setText(findTestObject(""Page_Register/input_NewPassword""), password)",Chrome 155.0.8059.84,,,18-10-2026 21:57:06,18-10-2026 21:57:06,0.613s,PASSED
+"setText(findTestObject(""Page_Register/input_RepeatPassword""), password)",Chrome 155.0.8059.84,,,18-10-2026 21:57:06,18-10-2026 21:57:07,0.655s,PASSED
+"setText(findTestObject(""Page_Register/input_FirstName""), firstName)",Chrome 155.0.8059.84,Step 3: isi Account Information,,18-10-2026 21:57:07,18-10-2026 21:57:08,0.621s,PASSED
+"setText(findTestObject(""Page_Register/input_LastName""), lastName)",Chrome 155.0.8059.84,,,18-10-2026 21:57:08,18-10-2026 21:57:08,0.600s,PASSED
+"setText(findTestObject(""Page_Register/input_Email""), email)",Chrome 155.0.8059.84,,,18-10-2026 21:57:08,18-10-2026 21:57:09,0.620s,PASSED
+"setText(findTestObject(""Page_Register/input_Phone""), phone)",Chrome 155.0.8059.84,,,18-10-2026 21:57:09,18-10-2026 21:57:09,0.593s,PASSED
+"setText(findTestObject(""Page_Register/input_Address1""), address1)",Chrome 155.0.8059.84,,,18-10-2026 21:57:09,18-10-2026 21:57:10,0.574s,PASSED
+"setText(findTestObject(""Page_Register/input_Address2""), address2)",Chrome 155.0.8059.84,,,18-10-2026 21:57:10,18-10-2026 21:57:11,0.593s,PASSED
+"setText(findTestObject(""Page_Register/input_City""), city)",Chrome 155.0.8059.84,,,18-10-2026 21:57:11,18-10-2026 21:57:11,0.577s,PASSED
+"setText(findTestObject(""Page_Register/input_State""), state)",Chrome 155.0.8059.84,,,18-10-2026 21:57:11,18-10-2026 21:57:12,0.600s,PASSED
+"setText(findTestObject(""Page_Register/input_Zip""), zip)",Chrome 155.0.8059.84,,,18-10-2026 21:57:12,18-10-2026 21:57:12,0.612s,PASSED
+"setText(findTestObject(""Page_Register/input_Country""), country)",Chrome 155.0.8059.84,,,18-10-2026 21:57:12,18-10-2026 21:57:13,0.644s,PASSED
+"selectOptionByValue(findTestObject(""Page_Register/select_LanguagePreference""), language, false)",Chrome 155.0.8059.84,Step 4: isi Profile Information,,18-10-2026 21:57:13,18-10-2026 21:57:14,0.540s,PASSED
+"selectOptionByValue(findTestObject(""Page_Register/select_FavouriteCategory""), favouriteCategory, false)",Chrome 155.0.8059.84,,,18-10-2026 21:57:14,18-10-2026 21:57:14,0.521s,PASSED
+"check(findTestObject(""Page_Register/chk_EnableMyList""))",Chrome 155.0.8059.84,,,18-10-2026 21:57:14,18-10-2026 21:57:14,0.292s,PASSED
+"check(findTestObject(""Page_Register/chk_EnableMyBanner""))",Chrome 155.0.8059.84,,,18-10-2026 21:57:14,18-10-2026 21:57:15,0.278s,PASSED
+"verifyElementChecked(findTestObject(""Page_Register/chk_EnableMyList""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:15,18-10-2026 21:57:15,0.264s,PASSED
+"click(findTestObject(""Page_Register/btn_SaveAccount""))",Chrome 155.0.8059.84,Step 5: simpan akun,,18-10-2026 21:57:15,18-10-2026 21:57:16,0.750s,PASSED
+"verifyElementPresent(findTestObject(""Page_Home/link_SidebarCategory"", [""categoryId"":favouriteCategory]), timeout)",Chrome 155.0.8059.84,Expected: registrasi berhasil - user diarahkan kembali ke halaman utama (catalog),,18-10-2026 21:57:16,18-10-2026 21:57:16,0.470s,PASSED
+"verifyMatch(getUrl(), "".*/actions/Catalog\.action.*"", true)",Chrome 155.0.8059.84,,,18-10-2026 21:57:16,18-10-2026 21:57:16,0.039s,PASSED
+"petstore.CommonKeywords.login(username, password)",Chrome 155.0.8059.84,Step 6: login menggunakan akun yang baru dibuat (JPetStore tidak menampilkan status login otomatis setelah registrasi),,18-10-2026 21:57:16,18-10-2026 21:57:19,3.166s,PASSED
+petstore.CommonKeywords.verifyLoggedIn(firstName),Chrome 155.0.8059.84,"Expected: akun baru tersimpan, bisa dipakai login, dan nama yang tampil sesuai data registrasi",,18-10-2026 21:57:19,18-10-2026 21:57:20,0.490s,PASSED
+petstore.CommonKeywords.logout(),Chrome 155.0.8059.84,Step 7: logout,,18-10-2026 21:57:20,18-10-2026 21:57:21,1.168s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:57:21,18-10-2026 21:57:21,0.187s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:21,18-10-2026 21:57:21,0.003s,PASSED
+,,,,,,,
+Test Cases/Authentication/TC02_Login_Invalid_Credentials,Chrome 155.0.8059.84,[NEGATIVE][DDT] Login dengan kombinasi credential tidak valid dari Data Files/LoginInvalidData. Verifikasi login ditolak dan user tetap di halaman Sign In.,ddt,18-10-2026 21:57:21,18-10-2026 21:57:28,6.858s,PASSED
+"DATA BINDING - {""password"":""Password123"",""scenario"":""Username tidak terdaftar"",""expectedMessage"":""Invalid username or password"",""username"":""user_tidak_terdaftar_999""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:21,18-10-2026 21:57:21,0.001s,PASSED
+"petstore.CommonKeywords.logScenario(""TC02"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:57:21,18-10-2026 21:57:21,0.002s,PASSED
+inputUsername = petstore.CommonKeywords.resolveDataToken(username),Chrome 155.0.8059.84,Siapkan data login: ganti token {GLOBAL_USERNAME}/{GLOBAL_PASSWORD} dengan Global Variable dan {EMPTY} dengan string kosong,,18-10-2026 21:57:21,18-10-2026 21:57:21,0.004s,PASSED
+inputPassword = petstore.CommonKeywords.resolveDataToken(password),Chrome 155.0.8059.84,,,18-10-2026 21:57:21,18-10-2026 21:57:21,0.002s,PASSED
+message = petstore.CommonKeywords.resolveDataToken(expectedMessage),Chrome 155.0.8059.84,,,18-10-2026 21:57:21,18-10-2026 21:57:21,0.002s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:57:21,18-10-2026 21:57:24,2.280s,PASSED
+"click(findTestObject(""Page_Header/link_SignIn""))",Chrome 155.0.8059.84,Step 1: klik menu Sign In,,18-10-2026 21:57:24,18-10-2026 21:57:24,0.572s,PASSED
+"setText(findTestObject(""Page_Login/input_Username""), inputUsername)",Chrome 155.0.8059.84,Step 2: input username & password tidak valid,,18-10-2026 21:57:24,18-10-2026 21:57:25,0.816s,PASSED
+"setText(findTestObject(""Page_Login/input_Password""), inputPassword)",Chrome 155.0.8059.84,,,18-10-2026 21:57:25,18-10-2026 21:57:26,0.656s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Chrome 155.0.8059.84,Step 3: klik tombol Login,,18-10-2026 21:57:26,18-10-2026 21:57:26,0.542s,PASSED
+"verifyElementPresent(findTestObject(""Page_Login/btn_Login""), timeout)",Chrome 155.0.8059.84,Expected: login ditolak - user tetap di halaman Sign In dan tidak ada menu Sign Out,,18-10-2026 21:57:26,18-10-2026 21:57:27,0.466s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Header/link_SignOut""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:27,18-10-2026 21:57:27,0.321s,PASSED
+"verifyElementPresent(findTestObject(""Page_Header/link_SignIn""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:27,18-10-2026 21:57:27,0.264s,PASSED
+"if (message.trim() != """")",Chrome 155.0.8059.84,Expected: pesan error sesuai data (jika diisi),,18-10-2026 21:57:27,18-10-2026 21:57:28,0.559s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:57:28,18-10-2026 21:57:28,0.162s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:28,18-10-2026 21:57:28,0.001s,PASSED
+,,,,,,,
+Test Cases/Authentication/TC02_Login_Invalid_Credentials,Chrome 155.0.8059.84,[NEGATIVE][DDT] Login dengan kombinasi credential tidak valid dari Data Files/LoginInvalidData. Verifikasi login ditolak dan user tetap di halaman Sign In.,ddt,18-10-2026 21:57:28,18-10-2026 21:57:35,6.412s,PASSED
+"DATA BINDING - {""password"":""password_salah_123"",""scenario"":""Password salah untuk username valid"",""expectedMessage"":""Invalid username or password"",""username"":""{GLOBAL_USERNAME}""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:28,18-10-2026 21:57:28,0.001s,PASSED
+"petstore.CommonKeywords.logScenario(""TC02"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:57:28,18-10-2026 21:57:28,0.001s,PASSED
+inputUsername = petstore.CommonKeywords.resolveDataToken(username),Chrome 155.0.8059.84,Siapkan data login: ganti token {GLOBAL_USERNAME}/{GLOBAL_PASSWORD} dengan Global Variable dan {EMPTY} dengan string kosong,,18-10-2026 21:57:28,18-10-2026 21:57:28,0.001s,PASSED
+inputPassword = petstore.CommonKeywords.resolveDataToken(password),Chrome 155.0.8059.84,,,18-10-2026 21:57:28,18-10-2026 21:57:28,0.001s,PASSED
+message = petstore.CommonKeywords.resolveDataToken(expectedMessage),Chrome 155.0.8059.84,,,18-10-2026 21:57:28,18-10-2026 21:57:28,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:57:28,18-10-2026 21:57:30,2.120s,PASSED
+"click(findTestObject(""Page_Header/link_SignIn""))",Chrome 155.0.8059.84,Step 1: klik menu Sign In,,18-10-2026 21:57:30,18-10-2026 21:57:31,0.560s,PASSED
+"setText(findTestObject(""Page_Login/input_Username""), inputUsername)",Chrome 155.0.8059.84,Step 2: input username & password tidak valid,,18-10-2026 21:57:31,18-10-2026 21:57:32,0.831s,PASSED
+"setText(findTestObject(""Page_Login/input_Password""), inputPassword)",Chrome 155.0.8059.84,,,18-10-2026 21:57:32,18-10-2026 21:57:32,0.633s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Chrome 155.0.8059.84,Step 3: klik tombol Login,,18-10-2026 21:57:32,18-10-2026 21:57:33,0.507s,PASSED
+"verifyElementPresent(findTestObject(""Page_Login/btn_Login""), timeout)",Chrome 155.0.8059.84,Expected: login ditolak - user tetap di halaman Sign In dan tidak ada menu Sign Out,,18-10-2026 21:57:33,18-10-2026 21:57:33,0.460s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Header/link_SignOut""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:33,18-10-2026 21:57:34,0.289s,PASSED
+"verifyElementPresent(findTestObject(""Page_Header/link_SignIn""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:34,18-10-2026 21:57:34,0.259s,PASSED
+"if (message.trim() != """")",Chrome 155.0.8059.84,Expected: pesan error sesuai data (jika diisi),,18-10-2026 21:57:34,18-10-2026 21:57:34,0.559s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:57:34,18-10-2026 21:57:35,0.171s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:35,18-10-2026 21:57:35,0.001s,PASSED
+,,,,,,,
+Test Cases/Authentication/TC02_Login_Invalid_Credentials,Chrome 155.0.8059.84,[NEGATIVE][DDT] Login dengan kombinasi credential tidak valid dari Data Files/LoginInvalidData. Verifikasi login ditolak dan user tetap di halaman Sign In.,ddt,18-10-2026 21:57:35,18-10-2026 21:57:41,6.305s,PASSED
+"DATA BINDING - {""password"":""{GLOBAL_PASSWORD}"",""scenario"":""Username salah dengan password valid"",""expectedMessage"":""Invalid username or password"",""username"":""user_salah_123""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:35,18-10-2026 21:57:35,0.001s,PASSED
+"petstore.CommonKeywords.logScenario(""TC02"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:57:35,18-10-2026 21:57:35,0.001s,PASSED
+inputUsername = petstore.CommonKeywords.resolveDataToken(username),Chrome 155.0.8059.84,Siapkan data login: ganti token {GLOBAL_USERNAME}/{GLOBAL_PASSWORD} dengan Global Variable dan {EMPTY} dengan string kosong,,18-10-2026 21:57:35,18-10-2026 21:57:35,0.001s,PASSED
+inputPassword = petstore.CommonKeywords.resolveDataToken(password),Chrome 155.0.8059.84,,,18-10-2026 21:57:35,18-10-2026 21:57:35,0.001s,PASSED
+message = petstore.CommonKeywords.resolveDataToken(expectedMessage),Chrome 155.0.8059.84,,,18-10-2026 21:57:35,18-10-2026 21:57:35,0.000s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:57:35,18-10-2026 21:57:37,2.219s,PASSED
+"click(findTestObject(""Page_Header/link_SignIn""))",Chrome 155.0.8059.84,Step 1: klik menu Sign In,,18-10-2026 21:57:37,18-10-2026 21:57:37,0.548s,PASSED
+"setText(findTestObject(""Page_Login/input_Username""), inputUsername)",Chrome 155.0.8059.84,Step 2: input username & password tidak valid,,18-10-2026 21:57:37,18-10-2026 21:57:38,0.777s,PASSED
+"setText(findTestObject(""Page_Login/input_Password""), inputPassword)",Chrome 155.0.8059.84,,,18-10-2026 21:57:38,18-10-2026 21:57:39,0.606s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Chrome 155.0.8059.84,Step 3: klik tombol Login,,18-10-2026 21:57:39,18-10-2026 21:57:39,0.314s,PASSED
+"verifyElementPresent(findTestObject(""Page_Login/btn_Login""), timeout)",Chrome 155.0.8059.84,Expected: login ditolak - user tetap di halaman Sign In dan tidak ada menu Sign Out,,18-10-2026 21:57:39,18-10-2026 21:57:40,0.682s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Header/link_SignOut""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:40,18-10-2026 21:57:40,0.248s,PASSED
+"verifyElementPresent(findTestObject(""Page_Header/link_SignIn""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:40,18-10-2026 21:57:40,0.250s,PASSED
+"if (message.trim() != """")",Chrome 155.0.8059.84,Expected: pesan error sesuai data (jika diisi),,18-10-2026 21:57:40,18-10-2026 21:57:41,0.484s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:57:41,18-10-2026 21:57:41,0.157s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:41,18-10-2026 21:57:41,0.002s,PASSED
+,,,,,,,
+Test Cases/Authentication/TC02_Login_Invalid_Credentials,Chrome 155.0.8059.84,[NEGATIVE][DDT] Login dengan kombinasi credential tidak valid dari Data Files/LoginInvalidData. Verifikasi login ditolak dan user tetap di halaman Sign In.,ddt,18-10-2026 21:57:41,18-10-2026 21:57:47,6.121s,PASSED
+"DATA BINDING - {""password"":""qwerty000"",""scenario"":""Username dan password salah"",""expectedMessage"":""Invalid username or password"",""username"":""abc_xyz_000""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:41,18-10-2026 21:57:41,0.001s,PASSED
+"petstore.CommonKeywords.logScenario(""TC02"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:57:41,18-10-2026 21:57:41,0.001s,PASSED
+inputUsername = petstore.CommonKeywords.resolveDataToken(username),Chrome 155.0.8059.84,Siapkan data login: ganti token {GLOBAL_USERNAME}/{GLOBAL_PASSWORD} dengan Global Variable dan {EMPTY} dengan string kosong,,18-10-2026 21:57:41,18-10-2026 21:57:41,0.001s,PASSED
+inputPassword = petstore.CommonKeywords.resolveDataToken(password),Chrome 155.0.8059.84,,,18-10-2026 21:57:41,18-10-2026 21:57:41,0.001s,PASSED
+message = petstore.CommonKeywords.resolveDataToken(expectedMessage),Chrome 155.0.8059.84,,,18-10-2026 21:57:41,18-10-2026 21:57:41,0.000s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:57:41,18-10-2026 21:57:43,2.167s,PASSED
+"click(findTestObject(""Page_Header/link_SignIn""))",Chrome 155.0.8059.84,Step 1: klik menu Sign In,,18-10-2026 21:57:43,18-10-2026 21:57:44,0.520s,PASSED
+"setText(findTestObject(""Page_Login/input_Username""), inputUsername)",Chrome 155.0.8059.84,Step 2: input username & password tidak valid,,18-10-2026 21:57:44,18-10-2026 21:57:44,0.786s,PASSED
+"setText(findTestObject(""Page_Login/input_Password""), inputPassword)",Chrome 155.0.8059.84,,,18-10-2026 21:57:44,18-10-2026 21:57:45,0.541s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Chrome 155.0.8059.84,Step 3: klik tombol Login,,18-10-2026 21:57:45,18-10-2026 21:57:45,0.519s,PASSED
+"verifyElementPresent(findTestObject(""Page_Login/btn_Login""), timeout)",Chrome 155.0.8059.84,Expected: login ditolak - user tetap di halaman Sign In dan tidak ada menu Sign Out,,18-10-2026 21:57:45,18-10-2026 21:57:46,0.458s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Header/link_SignOut""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:46,18-10-2026 21:57:46,0.234s,PASSED
+"verifyElementPresent(findTestObject(""Page_Header/link_SignIn""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:46,18-10-2026 21:57:46,0.233s,PASSED
+"if (message.trim() != """")",Chrome 155.0.8059.84,Expected: pesan error sesuai data (jika diisi),,18-10-2026 21:57:46,18-10-2026 21:57:47,0.492s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:57:47,18-10-2026 21:57:47,0.153s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:47,18-10-2026 21:57:47,0.001s,PASSED
+,,,,,,,
+Test Cases/Authentication/TC02_Login_Invalid_Credentials,Chrome 155.0.8059.84,[NEGATIVE][DDT] Login dengan kombinasi credential tidak valid dari Data Files/LoginInvalidData. Verifikasi login ditolak dan user tetap di halaman Sign In.,ddt,18-10-2026 21:57:47,18-10-2026 21:57:53,5.657s,PASSED
+"DATA BINDING - {""password"":""{GLOBAL_PASSWORD}"",""scenario"":""Username kosong"",""expectedMessage"":""{EMPTY}"",""username"":""{EMPTY}""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:47,18-10-2026 21:57:47,0.001s,PASSED
+"petstore.CommonKeywords.logScenario(""TC02"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:57:47,18-10-2026 21:57:47,0.000s,PASSED
+inputUsername = petstore.CommonKeywords.resolveDataToken(username),Chrome 155.0.8059.84,Siapkan data login: ganti token {GLOBAL_USERNAME}/{GLOBAL_PASSWORD} dengan Global Variable dan {EMPTY} dengan string kosong,,18-10-2026 21:57:47,18-10-2026 21:57:47,0.000s,PASSED
+inputPassword = petstore.CommonKeywords.resolveDataToken(password),Chrome 155.0.8059.84,,,18-10-2026 21:57:47,18-10-2026 21:57:47,0.001s,PASSED
+message = petstore.CommonKeywords.resolveDataToken(expectedMessage),Chrome 155.0.8059.84,,,18-10-2026 21:57:47,18-10-2026 21:57:47,0.000s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:57:47,18-10-2026 21:57:49,2.132s,PASSED
+"click(findTestObject(""Page_Header/link_SignIn""))",Chrome 155.0.8059.84,Step 1: klik menu Sign In,,18-10-2026 21:57:49,18-10-2026 21:57:50,0.562s,PASSED
+"setText(findTestObject(""Page_Login/input_Username""), inputUsername)",Chrome 155.0.8059.84,Step 2: input username & password tidak valid,,18-10-2026 21:57:50,18-10-2026 21:57:51,0.764s,PASSED
+"setText(findTestObject(""Page_Login/input_Password""), inputPassword)",Chrome 155.0.8059.84,,,18-10-2026 21:57:51,18-10-2026 21:57:51,0.579s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Chrome 155.0.8059.84,Step 3: klik tombol Login,,18-10-2026 21:57:51,18-10-2026 21:57:52,0.506s,PASSED
+"verifyElementPresent(findTestObject(""Page_Login/btn_Login""), timeout)",Chrome 155.0.8059.84,Expected: login ditolak - user tetap di halaman Sign In dan tidak ada menu Sign Out,,18-10-2026 21:57:52,18-10-2026 21:57:52,0.456s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Header/link_SignOut""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:52,18-10-2026 21:57:52,0.231s,PASSED
+"verifyElementPresent(findTestObject(""Page_Header/link_SignIn""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:52,18-10-2026 21:57:53,0.228s,PASSED
+"if (message.trim() != """")",Chrome 155.0.8059.84,Expected: pesan error sesuai data (jika diisi),,18-10-2026 21:57:53,18-10-2026 21:57:53,0.001s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:57:53,18-10-2026 21:57:53,0.175s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:53,18-10-2026 21:57:53,0.004s,PASSED
+,,,,,,,
+Test Cases/Authentication/TC02_Login_Invalid_Credentials,Chrome 155.0.8059.84,[NEGATIVE][DDT] Login dengan kombinasi credential tidak valid dari Data Files/LoginInvalidData. Verifikasi login ditolak dan user tetap di halaman Sign In.,ddt,18-10-2026 21:57:53,18-10-2026 21:57:58,5.568s,PASSED
+"DATA BINDING - {""password"":""{EMPTY}"",""scenario"":""Password kosong"",""expectedMessage"":""{EMPTY}"",""username"":""{GLOBAL_USERNAME}""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:53,18-10-2026 21:57:53,0.000s,PASSED
+"petstore.CommonKeywords.logScenario(""TC02"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:57:53,18-10-2026 21:57:53,0.001s,PASSED
+inputUsername = petstore.CommonKeywords.resolveDataToken(username),Chrome 155.0.8059.84,Siapkan data login: ganti token {GLOBAL_USERNAME}/{GLOBAL_PASSWORD} dengan Global Variable dan {EMPTY} dengan string kosong,,18-10-2026 21:57:53,18-10-2026 21:57:53,0.001s,PASSED
+inputPassword = petstore.CommonKeywords.resolveDataToken(password),Chrome 155.0.8059.84,,,18-10-2026 21:57:53,18-10-2026 21:57:53,0.001s,PASSED
+message = petstore.CommonKeywords.resolveDataToken(expectedMessage),Chrome 155.0.8059.84,,,18-10-2026 21:57:53,18-10-2026 21:57:53,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:57:53,18-10-2026 21:57:55,2.148s,PASSED
+"click(findTestObject(""Page_Header/link_SignIn""))",Chrome 155.0.8059.84,Step 1: klik menu Sign In,,18-10-2026 21:57:55,18-10-2026 21:57:55,0.502s,PASSED
+"setText(findTestObject(""Page_Login/input_Username""), inputUsername)",Chrome 155.0.8059.84,Step 2: input username & password tidak valid,,18-10-2026 21:57:55,18-10-2026 21:57:56,0.775s,PASSED
+"setText(findTestObject(""Page_Login/input_Password""), inputPassword)",Chrome 155.0.8059.84,,,18-10-2026 21:57:56,18-10-2026 21:57:57,0.550s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Chrome 155.0.8059.84,Step 3: klik tombol Login,,18-10-2026 21:57:57,18-10-2026 21:57:57,0.506s,PASSED
+"verifyElementPresent(findTestObject(""Page_Login/btn_Login""), timeout)",Chrome 155.0.8059.84,Expected: login ditolak - user tetap di halaman Sign In dan tidak ada menu Sign Out,,18-10-2026 21:57:57,18-10-2026 21:57:58,0.446s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Header/link_SignOut""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:58,18-10-2026 21:57:58,0.243s,PASSED
+"verifyElementPresent(findTestObject(""Page_Header/link_SignIn""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:57:58,18-10-2026 21:57:58,0.242s,PASSED
+"if (message.trim() != """")",Chrome 155.0.8059.84,Expected: pesan error sesuai data (jika diisi),,18-10-2026 21:57:58,18-10-2026 21:57:58,0.000s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:57:58,18-10-2026 21:57:58,0.135s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:58,18-10-2026 21:57:58,0.002s,PASSED
+,,,,,,,
+Test Cases/Authentication/TC01_Login_Valid_Credentials,Chrome 155.0.8059.84,"[POSITIVE] Login menggunakan credential valid dari Global Variable (Profile default), verifikasi user berhasil masuk lalu logout.",,18-10-2026 21:57:58,18-10-2026 21:58:06,7.843s,PASSED
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:57:58,18-10-2026 21:57:58,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:57:58,18-10-2026 21:58:01,2.107s,PASSED
+"click(findTestObject(""Page_Header/link_SignIn""))",Chrome 155.0.8059.84,Step 1: klik menu Sign In,,18-10-2026 21:58:01,18-10-2026 21:58:01,0.544s,PASSED
+"verifyElementVisible(findTestObject(""Page_Login/btn_Login""))",Chrome 155.0.8059.84,,,18-10-2026 21:58:01,18-10-2026 21:58:02,0.466s,PASSED
+"setText(findTestObject(""Page_Login/input_Username""), username)",Chrome 155.0.8059.84,Step 2: input username & password dari Global Variable,,18-10-2026 21:58:02,18-10-2026 21:58:02,0.591s,PASSED
+"setText(findTestObject(""Page_Login/input_Password""), password)",Chrome 155.0.8059.84,,,18-10-2026 21:58:02,18-10-2026 21:58:03,0.656s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Chrome 155.0.8059.84,Step 3: klik tombol Login,,18-10-2026 21:58:03,18-10-2026 21:58:04,0.722s,PASSED
+"verifyElementPresent(findTestObject(""Page_Header/link_SignOut""), timeout)",Chrome 155.0.8059.84,"Expected: login berhasil - menu Sign Out tampil, menu Sign In hilang, muncul teks Welcome",,18-10-2026 21:58:04,18-10-2026 21:58:04,0.451s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Header/link_SignIn""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:58:04,18-10-2026 21:58:04,0.244s,PASSED
+"welcomeText = getText(findTestObject(""Page_Home/txt_WelcomeContent""))",Chrome 155.0.8059.84,,,18-10-2026 21:58:04,18-10-2026 21:58:05,0.272s,PASSED
+"verifyMatch(welcomeText, ""^Welcome .+!$"", true)",Chrome 155.0.8059.84,,,18-10-2026 21:58:05,18-10-2026 21:58:05,0.005s,PASSED
+petstore.CommonKeywords.logout(),Chrome 155.0.8059.84,Step 4: logout dan pastikan session berakhir,,18-10-2026 21:58:05,18-10-2026 21:58:06,1.195s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Header/link_SignOut""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:58:06,18-10-2026 21:58:06,0.279s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:58:06,18-10-2026 21:58:06,0.168s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:06,18-10-2026 21:58:06,0.005s,PASSED
+,,,,,,,
+Test Cases/Catalog/TC04_Search_Product,Chrome 155.0.8059.84,"[POSITIVE + NEGATIVE][DDT] Pencarian produk berdasarkan keyword dari Data Files/SearchProductData. Verifikasi hasil ditemukan, tidak ditemukan, dan validasi keyword kosong.",ddt,18-10-2026 21:58:06,18-10-2026 21:58:11,4.896s,PASSED
+"DATA BINDING - {""scenario"":""Keyword valid huruf kecil"",""expectedResult"":""FOUND"",""expectedProduct..."":""Angelfish;Goldfish"",""keyword"":""fish""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:06,18-10-2026 21:58:06,0.000s,PASSED
+"petstore.CommonKeywords.logScenario(""TC04"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:58:06,18-10-2026 21:58:06,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:58:06,18-10-2026 21:58:09,2.226s,PASSED
+searchKeyword = petstore.CommonKeywords.resolveDataToken(keyword),Chrome 155.0.8059.84,Siapkan keyword: token {EMPTY} pada data diganti string kosong,,18-10-2026 21:58:09,18-10-2026 21:58:09,0.002s,PASSED
+"setText(findTestObject(""Page_Header/input_SearchKeyword""), searchKeyword)",Chrome 155.0.8059.84,Step 1: input keyword pada kolom search,,18-10-2026 21:58:09,18-10-2026 21:58:09,0.598s,PASSED
+"click(findTestObject(""Page_Header/btn_Search""))",Chrome 155.0.8059.84,Step 2: klik tombol Search,,18-10-2026 21:58:09,18-10-2026 21:58:10,0.916s,PASSED
+"if (expectedResult == ""FOUND"")",Chrome 155.0.8059.84,,,18-10-2026 21:58:10,18-10-2026 21:58:11,0.762s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:58:11,18-10-2026 21:58:11,0.180s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:11,18-10-2026 21:58:11,0.001s,PASSED
+,,,,,,,
+Test Cases/Catalog/TC04_Search_Product,Chrome 155.0.8059.84,"[POSITIVE + NEGATIVE][DDT] Pencarian produk berdasarkan keyword dari Data Files/SearchProductData. Verifikasi hasil ditemukan, tidak ditemukan, dan validasi keyword kosong.",ddt,18-10-2026 21:58:11,18-10-2026 21:58:16,4.722s,PASSED
+"DATA BINDING - {""scenario"":""Keyword valid huruf besar (case-insensitive)"",""expectedResult"":""FOUND"",""expectedProduct..."":""Angelfish;Goldfish"",""keyword"":""FISH""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:11,18-10-2026 21:58:11,0.001s,PASSED
+"petstore.CommonKeywords.logScenario(""TC04"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:58:11,18-10-2026 21:58:11,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:58:11,18-10-2026 21:58:13,2.264s,PASSED
+searchKeyword = petstore.CommonKeywords.resolveDataToken(keyword),Chrome 155.0.8059.84,Siapkan keyword: token {EMPTY} pada data diganti string kosong,,18-10-2026 21:58:13,18-10-2026 21:58:13,0.000s,PASSED
+"setText(findTestObject(""Page_Header/input_SearchKeyword""), searchKeyword)",Chrome 155.0.8059.84,Step 1: input keyword pada kolom search,,18-10-2026 21:58:13,18-10-2026 21:58:14,0.598s,PASSED
+"click(findTestObject(""Page_Header/btn_Search""))",Chrome 155.0.8059.84,Step 2: klik tombol Search,,18-10-2026 21:58:14,18-10-2026 21:58:15,0.936s,PASSED
+"if (expectedResult == ""FOUND"")",Chrome 155.0.8059.84,,,18-10-2026 21:58:15,18-10-2026 21:58:16,0.749s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:58:16,18-10-2026 21:58:16,0.161s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:16,18-10-2026 21:58:16,0.001s,PASSED
+,,,,,,,
+Test Cases/Catalog/TC04_Search_Product,Chrome 155.0.8059.84,"[POSITIVE + NEGATIVE][DDT] Pencarian produk berdasarkan keyword dari Data Files/SearchProductData. Verifikasi hasil ditemukan, tidak ditemukan, dan validasi keyword kosong.",ddt,18-10-2026 21:58:16,18-10-2026 21:58:20,4.560s,PASSED
+"DATA BINDING - {""scenario"":""Keyword sebagian nama produk"",""expectedResult"":""FOUND"",""expectedProduct..."":""Golden Retriever;Labrador Retriever"",""keyword"":""Retriever""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:16,18-10-2026 21:58:16,0.001s,PASSED
+"petstore.CommonKeywords.logScenario(""TC04"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:58:16,18-10-2026 21:58:16,0.006s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:58:16,18-10-2026 21:58:18,2.137s,PASSED
+searchKeyword = petstore.CommonKeywords.resolveDataToken(keyword),Chrome 155.0.8059.84,Siapkan keyword: token {EMPTY} pada data diganti string kosong,,18-10-2026 21:58:18,18-10-2026 21:58:18,0.001s,PASSED
+"setText(findTestObject(""Page_Header/input_SearchKeyword""), searchKeyword)",Chrome 155.0.8059.84,Step 1: input keyword pada kolom search,,18-10-2026 21:58:18,18-10-2026 21:58:19,0.590s,PASSED
+"click(findTestObject(""Page_Header/btn_Search""))",Chrome 155.0.8059.84,Step 2: klik tombol Search,,18-10-2026 21:58:19,18-10-2026 21:58:20,0.887s,PASSED
+"if (expectedResult == ""FOUND"")",Chrome 155.0.8059.84,,,18-10-2026 21:58:20,18-10-2026 21:58:20,0.759s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:58:20,18-10-2026 21:58:20,0.166s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:20,18-10-2026 21:58:20,0.001s,PASSED
+,,,,,,,
+Test Cases/Catalog/TC04_Search_Product,Chrome 155.0.8059.84,"[POSITIVE + NEGATIVE][DDT] Pencarian produk berdasarkan keyword dari Data Files/SearchProductData. Verifikasi hasil ditemukan, tidak ditemukan, dan validasi keyword kosong.",ddt,18-10-2026 21:58:21,18-10-2026 21:58:25,4.107s,PASSED
+"DATA BINDING - {""scenario"":""Keyword satu produk"",""expectedResult"":""FOUND"",""expectedProduct..."":""Bulldog"",""keyword"":""dog""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:21,18-10-2026 21:58:21,0.001s,PASSED
+"petstore.CommonKeywords.logScenario(""TC04"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:58:21,18-10-2026 21:58:21,0.000s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:58:21,18-10-2026 21:58:23,2.129s,PASSED
+searchKeyword = petstore.CommonKeywords.resolveDataToken(keyword),Chrome 155.0.8059.84,Siapkan keyword: token {EMPTY} pada data diganti string kosong,,18-10-2026 21:58:23,18-10-2026 21:58:23,0.001s,PASSED
+"setText(findTestObject(""Page_Header/input_SearchKeyword""), searchKeyword)",Chrome 155.0.8059.84,Step 1: input keyword pada kolom search,,18-10-2026 21:58:23,18-10-2026 21:58:23,0.605s,PASSED
+"click(findTestObject(""Page_Header/btn_Search""))",Chrome 155.0.8059.84,Step 2: klik tombol Search,,18-10-2026 21:58:23,18-10-2026 21:58:24,0.726s,PASSED
+"if (expectedResult == ""FOUND"")",Chrome 155.0.8059.84,,,18-10-2026 21:58:24,18-10-2026 21:58:24,0.478s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:58:24,18-10-2026 21:58:25,0.154s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:25,18-10-2026 21:58:25,0.001s,PASSED
+,,,,,,,
+Test Cases/Catalog/TC04_Search_Product,Chrome 155.0.8059.84,"[POSITIVE + NEGATIVE][DDT] Pencarian produk berdasarkan keyword dari Data Files/SearchProductData. Verifikasi hasil ditemukan, tidak ditemukan, dan validasi keyword kosong.",ddt,18-10-2026 21:58:25,18-10-2026 21:58:29,4.321s,PASSED
+"DATA BINDING - {""scenario"":""Keyword tidak terdaftar"",""expectedResult"":""NOT_FOUND"",""expectedProduct..."":""{EMPTY}"",""keyword"":""xyz123""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:25,18-10-2026 21:58:25,0.001s,PASSED
+"petstore.CommonKeywords.logScenario(""TC04"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:58:25,18-10-2026 21:58:25,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:58:25,18-10-2026 21:58:27,2.230s,PASSED
+searchKeyword = petstore.CommonKeywords.resolveDataToken(keyword),Chrome 155.0.8059.84,Siapkan keyword: token {EMPTY} pada data diganti string kosong,,18-10-2026 21:58:27,18-10-2026 21:58:27,0.000s,PASSED
+"setText(findTestObject(""Page_Header/input_SearchKeyword""), searchKeyword)",Chrome 155.0.8059.84,Step 1: input keyword pada kolom search,,18-10-2026 21:58:27,18-10-2026 21:58:28,0.627s,PASSED
+"click(findTestObject(""Page_Header/btn_Search""))",Chrome 155.0.8059.84,Step 2: klik tombol Search,,18-10-2026 21:58:28,18-10-2026 21:58:28,0.528s,PASSED
+"if (expectedResult == ""FOUND"")",Chrome 155.0.8059.84,,,18-10-2026 21:58:28,18-10-2026 21:58:28,0.001s,PASSED
+"else if (expectedResult == ""NOT_FOUND"")",Chrome 155.0.8059.84,,,18-10-2026 21:58:28,18-10-2026 21:58:29,0.756s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:58:29,18-10-2026 21:58:29,0.160s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:29,18-10-2026 21:58:29,0.005s,PASSED
+,,,,,,,
+Test Cases/Catalog/TC04_Search_Product,Chrome 155.0.8059.84,"[POSITIVE + NEGATIVE][DDT] Pencarian produk berdasarkan keyword dari Data Files/SearchProductData. Verifikasi hasil ditemukan, tidak ditemukan, dan validasi keyword kosong.",ddt,18-10-2026 21:58:29,18-10-2026 21:58:33,4.246s,PASSED
+"DATA BINDING - {""scenario"":""Keyword karakter spesial"",""expectedResult"":""NOT_FOUND"",""expectedProduct..."":""{EMPTY}"",""keyword"":""\u003cscript\u003e""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:29,18-10-2026 21:58:29,0.001s,PASSED
+"petstore.CommonKeywords.logScenario(""TC04"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:58:29,18-10-2026 21:58:29,0.000s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:58:29,18-10-2026 21:58:31,2.179s,PASSED
+searchKeyword = petstore.CommonKeywords.resolveDataToken(keyword),Chrome 155.0.8059.84,Siapkan keyword: token {EMPTY} pada data diganti string kosong,,18-10-2026 21:58:31,18-10-2026 21:58:31,0.000s,PASSED
+"setText(findTestObject(""Page_Header/input_SearchKeyword""), searchKeyword)",Chrome 155.0.8059.84,Step 1: input keyword pada kolom search,,18-10-2026 21:58:31,18-10-2026 21:58:32,0.589s,PASSED
+"click(findTestObject(""Page_Header/btn_Search""))",Chrome 155.0.8059.84,Step 2: klik tombol Search,,18-10-2026 21:58:32,18-10-2026 21:58:32,0.524s,PASSED
+"if (expectedResult == ""FOUND"")",Chrome 155.0.8059.84,,,18-10-2026 21:58:32,18-10-2026 21:58:32,0.000s,PASSED
+"else if (expectedResult == ""NOT_FOUND"")",Chrome 155.0.8059.84,,,18-10-2026 21:58:32,18-10-2026 21:58:33,0.759s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:58:33,18-10-2026 21:58:33,0.181s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:33,18-10-2026 21:58:33,0.001s,PASSED
+,,,,,,,
+Test Cases/Catalog/TC04_Search_Product,Chrome 155.0.8059.84,"[POSITIVE + NEGATIVE][DDT] Pencarian produk berdasarkan keyword dari Data Files/SearchProductData. Verifikasi hasil ditemukan, tidak ditemukan, dan validasi keyword kosong.",ddt,18-10-2026 21:58:33,18-10-2026 21:58:38,4.243s,PASSED
+"DATA BINDING - {""scenario"":""Keyword kosong"",""expectedResult"":""EMPTY_KEYWORD"",""expectedProduct..."":""{EMPTY}"",""keyword"":""{EMPTY}""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:33,18-10-2026 21:58:33,0.000s,PASSED
+"petstore.CommonKeywords.logScenario(""TC04"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:58:33,18-10-2026 21:58:33,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:58:33,18-10-2026 21:58:36,2.130s,PASSED
+searchKeyword = petstore.CommonKeywords.resolveDataToken(keyword),Chrome 155.0.8059.84,Siapkan keyword: token {EMPTY} pada data diganti string kosong,,18-10-2026 21:58:36,18-10-2026 21:58:36,0.001s,PASSED
+"setText(findTestObject(""Page_Header/input_SearchKeyword""), searchKeyword)",Chrome 155.0.8059.84,Step 1: input keyword pada kolom search,,18-10-2026 21:58:36,18-10-2026 21:58:36,0.586s,PASSED
+"click(findTestObject(""Page_Header/btn_Search""))",Chrome 155.0.8059.84,Step 2: klik tombol Search,,18-10-2026 21:58:36,18-10-2026 21:58:37,0.522s,PASSED
+"if (expectedResult == ""FOUND"")",Chrome 155.0.8059.84,,,18-10-2026 21:58:37,18-10-2026 21:58:37,0.001s,PASSED
+"else if (expectedResult == ""NOT_FOUND"")",Chrome 155.0.8059.84,,,18-10-2026 21:58:37,18-10-2026 21:58:37,0.001s,PASSED
+"else if (expectedResult == ""EMPTY_KEYWORD"")",Chrome 155.0.8059.84,,,18-10-2026 21:58:37,18-10-2026 21:58:37,0.710s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:58:37,18-10-2026 21:58:38,0.221s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:38,18-10-2026 21:58:38,0.001s,PASSED
+,,,,,,,
+Test Cases/Catalog/TC05_Browse_Product_By_Category,Chrome 155.0.8059.84,"[POSITIVE][DDT] Navigasi kategori dari sidebar halaman utama, verifikasi judul kategori & produk, lalu buka detail produk. Data: Data Files/CategoryData.",ddt,18-10-2026 21:58:38,18-10-2026 21:58:42,4.796s,PASSED
+"DATA BINDING - {""productId"":""FI-SW-01"",""categoryName"":""Fish"",""categoryId"":""FISH"",""productName"":""Angelfish""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:38,18-10-2026 21:58:38,0.002s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:58:38,18-10-2026 21:58:40,2.197s,PASSED
+"click(findTestObject(""Page_Home/link_SidebarCategory"", [""categoryId"":categoryId]))",Chrome 155.0.8059.84,Step 1: klik ikon kategori pada sidebar,,18-10-2026 21:58:40,18-10-2026 21:58:41,0.578s,PASSED
+"verifyElementText(findTestObject(""Page_Category/txt_CategoryTitle""), categoryName)",Chrome 155.0.8059.84,Expected: halaman kategori terbuka dengan judul dan URL yang sesuai,,18-10-2026 21:58:41,18-10-2026 21:58:41,0.455s,PASSED
+"verifyMatch(getUrl(), "".*categoryId="" + categoryId + "".*"", true)",Chrome 155.0.8059.84,,,18-10-2026 21:58:41,18-10-2026 21:58:41,0.008s,PASSED
+"verifyElementText(findTestObject(""Page_Category/txt_ProductName"", [""productId"":productId]), productName)",Chrome 155.0.8059.84,Expected: produk yang diharapkan tampil di daftar kategori,,18-10-2026 21:58:41,18-10-2026 21:58:41,0.242s,PASSED
+"click(findTestObject(""Page_Category/link_ProductId"", [""productId"":productId]))",Chrome 155.0.8059.84,Step 2: klik Product ID untuk membuka detail produk,,18-10-2026 21:58:41,18-10-2026 21:58:42,0.531s,PASSED
+"verifyElementText(findTestObject(""Page_Product/txt_ProductTitle""), productName)",Chrome 155.0.8059.84,Expected: halaman detail produk terbuka dengan nama produk yang benar,,18-10-2026 21:58:42,18-10-2026 21:58:42,0.460s,PASSED
+"verifyMatch(getUrl(), "".*productId="" + productId + "".*"", true)",Chrome 155.0.8059.84,,,18-10-2026 21:58:42,18-10-2026 21:58:42,0.006s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:58:42,18-10-2026 21:58:42,0.163s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:42,18-10-2026 21:58:42,0.005s,PASSED
+,,,,,,,
+Test Cases/Catalog/TC05_Browse_Product_By_Category,Chrome 155.0.8059.84,"[POSITIVE][DDT] Navigasi kategori dari sidebar halaman utama, verifikasi judul kategori & produk, lalu buka detail produk. Data: Data Files/CategoryData.",ddt,18-10-2026 21:58:42,18-10-2026 21:58:47,4.816s,PASSED
+"DATA BINDING - {""productId"":""K9-BD-01"",""categoryName"":""Dogs"",""categoryId"":""DOGS"",""productName"":""Bulldog""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:42,18-10-2026 21:58:42,0.000s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:58:42,18-10-2026 21:58:45,2.334s,PASSED
+"click(findTestObject(""Page_Home/link_SidebarCategory"", [""categoryId"":categoryId]))",Chrome 155.0.8059.84,Step 1: klik ikon kategori pada sidebar,,18-10-2026 21:58:45,18-10-2026 21:58:45,0.588s,PASSED
+"verifyElementText(findTestObject(""Page_Category/txt_CategoryTitle""), categoryName)",Chrome 155.0.8059.84,Expected: halaman kategori terbuka dengan judul dan URL yang sesuai,,18-10-2026 21:58:45,18-10-2026 21:58:46,0.460s,PASSED
+"verifyMatch(getUrl(), "".*categoryId="" + categoryId + "".*"", true)",Chrome 155.0.8059.84,,,18-10-2026 21:58:46,18-10-2026 21:58:46,0.007s,PASSED
+"verifyElementText(findTestObject(""Page_Category/txt_ProductName"", [""productId"":productId]), productName)",Chrome 155.0.8059.84,Expected: produk yang diharapkan tampil di daftar kategori,,18-10-2026 21:58:46,18-10-2026 21:58:46,0.246s,PASSED
+"click(findTestObject(""Page_Category/link_ProductId"", [""productId"":productId]))",Chrome 155.0.8059.84,Step 2: klik Product ID untuk membuka detail produk,,18-10-2026 21:58:46,18-10-2026 21:58:47,0.545s,PASSED
+"verifyElementText(findTestObject(""Page_Product/txt_ProductTitle""), productName)",Chrome 155.0.8059.84,Expected: halaman detail produk terbuka dengan nama produk yang benar,,18-10-2026 21:58:47,18-10-2026 21:58:47,0.449s,PASSED
+"verifyMatch(getUrl(), "".*productId="" + productId + "".*"", true)",Chrome 155.0.8059.84,,,18-10-2026 21:58:47,18-10-2026 21:58:47,0.008s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:58:47,18-10-2026 21:58:47,0.168s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:47,18-10-2026 21:58:47,0.001s,PASSED
+,,,,,,,
+Test Cases/Catalog/TC05_Browse_Product_By_Category,Chrome 155.0.8059.84,"[POSITIVE][DDT] Navigasi kategori dari sidebar halaman utama, verifikasi judul kategori & produk, lalu buka detail produk. Data: Data Files/CategoryData.",ddt,18-10-2026 21:58:47,18-10-2026 21:58:52,4.668s,PASSED
+"DATA BINDING - {""productId"":""FL-DSH-01"",""categoryName"":""Cats"",""categoryId"":""CATS"",""productName"":""Manx""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:47,18-10-2026 21:58:47,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:58:47,18-10-2026 21:58:50,2.194s,PASSED
+"click(findTestObject(""Page_Home/link_SidebarCategory"", [""categoryId"":categoryId]))",Chrome 155.0.8059.84,Step 1: klik ikon kategori pada sidebar,,18-10-2026 21:58:50,18-10-2026 21:58:50,0.559s,PASSED
+"verifyElementText(findTestObject(""Page_Category/txt_CategoryTitle""), categoryName)",Chrome 155.0.8059.84,Expected: halaman kategori terbuka dengan judul dan URL yang sesuai,,18-10-2026 21:58:50,18-10-2026 21:58:51,0.459s,PASSED
+"verifyMatch(getUrl(), "".*categoryId="" + categoryId + "".*"", true)",Chrome 155.0.8059.84,,,18-10-2026 21:58:51,18-10-2026 21:58:51,0.007s,PASSED
+"verifyElementText(findTestObject(""Page_Category/txt_ProductName"", [""productId"":productId]), productName)",Chrome 155.0.8059.84,Expected: produk yang diharapkan tampil di daftar kategori,,18-10-2026 21:58:51,18-10-2026 21:58:51,0.260s,PASSED
+"click(findTestObject(""Page_Category/link_ProductId"", [""productId"":productId]))",Chrome 155.0.8059.84,Step 2: klik Product ID untuk membuka detail produk,,18-10-2026 21:58:51,18-10-2026 21:58:51,0.550s,PASSED
+"verifyElementText(findTestObject(""Page_Product/txt_ProductTitle""), productName)",Chrome 155.0.8059.84,Expected: halaman detail produk terbuka dengan nama produk yang benar,,18-10-2026 21:58:51,18-10-2026 21:58:52,0.452s,PASSED
+"verifyMatch(getUrl(), "".*productId="" + productId + "".*"", true)",Chrome 155.0.8059.84,,,18-10-2026 21:58:52,18-10-2026 21:58:52,0.006s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:58:52,18-10-2026 21:58:52,0.170s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:52,18-10-2026 21:58:52,0.001s,PASSED
+,,,,,,,
+Test Cases/Catalog/TC05_Browse_Product_By_Category,Chrome 155.0.8059.84,"[POSITIVE][DDT] Navigasi kategori dari sidebar halaman utama, verifikasi judul kategori & produk, lalu buka detail produk. Data: Data Files/CategoryData.",ddt,18-10-2026 21:58:52,18-10-2026 21:58:57,4.712s,PASSED
+"DATA BINDING - {""productId"":""RP-SN-01"",""categoryName"":""Reptiles"",""categoryId"":""REPTILES"",""productName"":""Rattlesnake""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:52,18-10-2026 21:58:52,0.000s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:58:52,18-10-2026 21:58:54,2.209s,PASSED
+"click(findTestObject(""Page_Home/link_SidebarCategory"", [""categoryId"":categoryId]))",Chrome 155.0.8059.84,Step 1: klik ikon kategori pada sidebar,,18-10-2026 21:58:54,18-10-2026 21:58:55,0.570s,PASSED
+"verifyElementText(findTestObject(""Page_Category/txt_CategoryTitle""), categoryName)",Chrome 155.0.8059.84,Expected: halaman kategori terbuka dengan judul dan URL yang sesuai,,18-10-2026 21:58:55,18-10-2026 21:58:55,0.484s,PASSED
+"verifyMatch(getUrl(), "".*categoryId="" + categoryId + "".*"", true)",Chrome 155.0.8059.84,,,18-10-2026 21:58:55,18-10-2026 21:58:55,0.007s,PASSED
+"verifyElementText(findTestObject(""Page_Category/txt_ProductName"", [""productId"":productId]), productName)",Chrome 155.0.8059.84,Expected: produk yang diharapkan tampil di daftar kategori,,18-10-2026 21:58:55,18-10-2026 21:58:56,0.258s,PASSED
+"click(findTestObject(""Page_Category/link_ProductId"", [""productId"":productId]))",Chrome 155.0.8059.84,Step 2: klik Product ID untuk membuka detail produk,,18-10-2026 21:58:56,18-10-2026 21:58:56,0.548s,PASSED
+"verifyElementText(findTestObject(""Page_Product/txt_ProductTitle""), productName)",Chrome 155.0.8059.84,Expected: halaman detail produk terbuka dengan nama produk yang benar,,18-10-2026 21:58:56,18-10-2026 21:58:57,0.462s,PASSED
+"verifyMatch(getUrl(), "".*productId="" + productId + "".*"", true)",Chrome 155.0.8059.84,,,18-10-2026 21:58:57,18-10-2026 21:58:57,0.006s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:58:57,18-10-2026 21:58:57,0.155s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:57,18-10-2026 21:58:57,0.001s,PASSED
+,,,,,,,
+Test Cases/Catalog/TC05_Browse_Product_By_Category,Chrome 155.0.8059.84,"[POSITIVE][DDT] Navigasi kategori dari sidebar halaman utama, verifikasi judul kategori & produk, lalu buka detail produk. Data: Data Files/CategoryData.",ddt,18-10-2026 21:58:57,18-10-2026 21:59:02,4.728s,PASSED
+"DATA BINDING - {""productId"":""AV-CB-01"",""categoryName"":""Birds"",""categoryId"":""BIRDS"",""productName"":""Amazon Parrot""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:58:57,18-10-2026 21:58:57,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:58:57,18-10-2026 21:58:59,2.267s,PASSED
+"click(findTestObject(""Page_Home/link_SidebarCategory"", [""categoryId"":categoryId]))",Chrome 155.0.8059.84,Step 1: klik ikon kategori pada sidebar,,18-10-2026 21:58:59,18-10-2026 21:59:00,0.586s,PASSED
+"verifyElementText(findTestObject(""Page_Category/txt_CategoryTitle""), categoryName)",Chrome 155.0.8059.84,Expected: halaman kategori terbuka dengan judul dan URL yang sesuai,,18-10-2026 21:59:00,18-10-2026 21:59:00,0.464s,PASSED
+"verifyMatch(getUrl(), "".*categoryId="" + categoryId + "".*"", true)",Chrome 155.0.8059.84,,,18-10-2026 21:59:00,18-10-2026 21:59:00,0.006s,PASSED
+"verifyElementText(findTestObject(""Page_Category/txt_ProductName"", [""productId"":productId]), productName)",Chrome 155.0.8059.84,Expected: produk yang diharapkan tampil di daftar kategori,,18-10-2026 21:59:00,18-10-2026 21:59:00,0.228s,PASSED
+"click(findTestObject(""Page_Category/link_ProductId"", [""productId"":productId]))",Chrome 155.0.8059.84,Step 2: klik Product ID untuk membuka detail produk,,18-10-2026 21:59:00,18-10-2026 21:59:01,0.536s,PASSED
+"verifyElementText(findTestObject(""Page_Product/txt_ProductTitle""), productName)",Chrome 155.0.8059.84,Expected: halaman detail produk terbuka dengan nama produk yang benar,,18-10-2026 21:59:01,18-10-2026 21:59:01,0.461s,PASSED
+"verifyMatch(getUrl(), "".*productId="" + productId + "".*"", true)",Chrome 155.0.8059.84,,,18-10-2026 21:59:01,18-10-2026 21:59:01,0.007s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:59:01,18-10-2026 21:59:02,0.161s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:02,18-10-2026 21:59:02,0.000s,PASSED
+,,,,,,,
+Test Cases/Cart/TC06_Add_Item_To_Cart,Chrome 155.0.8059.84,"[POSITIVE][DDT] Tambah item ke cart dari halaman produk, verifikasi item, deskripsi, quantity, harga, sub total, lalu remove item hingga cart kosong. Data: Data Files/CartItemData.",ddt,18-10-2026 21:59:02,18-10-2026 21:59:10,8.437s,PASSED
+"DATA BINDING - {""itemId"":""EST-1"",""productId"":""FI-SW-01"",""itemDescription"":""Large Angelfish"",""categoryId"":""FISH"",""productName"":""Angelfish"",""listPrice"":""$16.50""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:02,18-10-2026 21:59:02,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:59:02,18-10-2026 21:59:04,2.138s,PASSED
+"click(findTestObject(""Page_Header/link_QuickCategory"", [""categoryId"":categoryId]))",Chrome 155.0.8059.84,Step 1: pilih kategori melalui Quick Links di header,,18-10-2026 21:59:04,18-10-2026 21:59:04,0.516s,PASSED
+"click(findTestObject(""Page_Category/link_ProductId"", [""productId"":productId]))",Chrome 155.0.8059.84,Step 2: buka detail produk,,18-10-2026 21:59:04,18-10-2026 21:59:05,0.747s,PASSED
+"verifyElementText(findTestObject(""Page_Product/txt_ProductTitle""), productName)",Chrome 155.0.8059.84,,,18-10-2026 21:59:05,18-10-2026 21:59:06,0.488s,PASSED
+"click(findTestObject(""Page_Product/btn_AddToCart"", [""itemId"":itemId]))",Chrome 155.0.8059.84,Step 3: klik Add to Cart pada item yang dipilih,,18-10-2026 21:59:06,18-10-2026 21:59:06,0.533s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_CartTitle""), ""Shopping Cart"")",Chrome 155.0.8059.84,Expected: halaman Shopping Cart terbuka dan berisi item yang benar,,18-10-2026 21:59:06,18-10-2026 21:59:07,0.460s,PASSED
+"verifyElementPresent(findTestObject(""Page_Cart/link_CartItemId"", [""itemId"":itemId]), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:07,18-10-2026 21:59:07,0.252s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_ItemDescription"", [""itemId"":itemId]), itemDescription)",Chrome 155.0.8059.84,,,18-10-2026 21:59:07,18-10-2026 21:59:07,0.267s,PASSED
+"verifyElementAttributeValue(findTestObject(""Page_Cart/input_Quantity"", [""itemId"":itemId]), ""value"", ""1"", timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:07,18-10-2026 21:59:07,0.288s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_ListPrice"", [""itemId"":itemId]), listPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:07,18-10-2026 21:59:08,0.278s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_TotalCost"", [""itemId"":itemId]), listPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:08,18-10-2026 21:59:08,0.267s,PASSED
+expectedPrice = petstore.CartKeywords.parsePrice(listPrice),Chrome 155.0.8059.84,Expected: Sub Total = harga item (quantity 1),,18-10-2026 21:59:08,18-10-2026 21:59:08,0.018s,PASSED
+"subTotalText = getText(findTestObject(""Page_Cart/txt_SubTotal""))",Chrome 155.0.8059.84,,,18-10-2026 21:59:08,18-10-2026 21:59:08,0.276s,PASSED
+"petstore.CartKeywords.verifyPrice(subTotalText, expectedPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:08,18-10-2026 21:59:08,0.004s,PASSED
+"click(findTestObject(""Page_Cart/btn_Remove"", [""itemId"":itemId]))",Chrome 155.0.8059.84,Step 4: remove item dari cart,,18-10-2026 21:59:08,18-10-2026 21:59:09,0.523s,PASSED
+"verifyElementPresent(findTestObject(""Page_Cart/txt_EmptyCart""), timeout)",Chrome 155.0.8059.84,Expected: cart kosong dan Sub Total kembali $0.00,,18-10-2026 21:59:09,18-10-2026 21:59:09,0.484s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Cart/link_CartItemId"", [""itemId"":itemId]), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:09,18-10-2026 21:59:10,0.270s,PASSED
+"petstore.CartKeywords.verifyPrice(getText(findTestObject(""Page_Cart/txt_SubTotal"")), ZERO)",Chrome 155.0.8059.84,,,18-10-2026 21:59:10,18-10-2026 21:59:10,0.246s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:59:10,18-10-2026 21:59:10,0.163s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:10,18-10-2026 21:59:10,0.008s,PASSED
+,,,,,,,
+Test Cases/Cart/TC06_Add_Item_To_Cart,Chrome 155.0.8059.84,"[POSITIVE][DDT] Tambah item ke cart dari halaman produk, verifikasi item, deskripsi, quantity, harga, sub total, lalu remove item hingga cart kosong. Data: Data Files/CartItemData.",ddt,18-10-2026 21:59:10,18-10-2026 21:59:18,8.262s,PASSED
+"DATA BINDING - {""itemId"":""EST-6"",""productId"":""K9-BD-01"",""itemDescription"":""Male Adult Bulldog"",""categoryId"":""DOGS"",""productName"":""Bulldog"",""listPrice"":""$18.50""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:10,18-10-2026 21:59:10,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:59:10,18-10-2026 21:59:12,2.197s,PASSED
+"click(findTestObject(""Page_Header/link_QuickCategory"", [""categoryId"":categoryId]))",Chrome 155.0.8059.84,Step 1: pilih kategori melalui Quick Links di header,,18-10-2026 21:59:12,18-10-2026 21:59:13,0.548s,PASSED
+"click(findTestObject(""Page_Category/link_ProductId"", [""productId"":productId]))",Chrome 155.0.8059.84,Step 2: buka detail produk,,18-10-2026 21:59:13,18-10-2026 21:59:14,0.745s,PASSED
+"verifyElementText(findTestObject(""Page_Product/txt_ProductTitle""), productName)",Chrome 155.0.8059.84,,,18-10-2026 21:59:14,18-10-2026 21:59:14,0.490s,PASSED
+"click(findTestObject(""Page_Product/btn_AddToCart"", [""itemId"":itemId]))",Chrome 155.0.8059.84,Step 3: klik Add to Cart pada item yang dipilih,,18-10-2026 21:59:14,18-10-2026 21:59:15,0.549s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_CartTitle""), ""Shopping Cart"")",Chrome 155.0.8059.84,Expected: halaman Shopping Cart terbuka dan berisi item yang benar,,18-10-2026 21:59:15,18-10-2026 21:59:15,0.458s,PASSED
+"verifyElementPresent(findTestObject(""Page_Cart/link_CartItemId"", [""itemId"":itemId]), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:15,18-10-2026 21:59:15,0.254s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_ItemDescription"", [""itemId"":itemId]), itemDescription)",Chrome 155.0.8059.84,,,18-10-2026 21:59:15,18-10-2026 21:59:16,0.254s,PASSED
+"verifyElementAttributeValue(findTestObject(""Page_Cart/input_Quantity"", [""itemId"":itemId]), ""value"", ""1"", timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:16,18-10-2026 21:59:16,0.266s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_ListPrice"", [""itemId"":itemId]), listPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:16,18-10-2026 21:59:16,0.274s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_TotalCost"", [""itemId"":itemId]), listPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:16,18-10-2026 21:59:16,0.280s,PASSED
+expectedPrice = petstore.CartKeywords.parsePrice(listPrice),Chrome 155.0.8059.84,Expected: Sub Total = harga item (quantity 1),,18-10-2026 21:59:16,18-10-2026 21:59:16,0.001s,PASSED
+"subTotalText = getText(findTestObject(""Page_Cart/txt_SubTotal""))",Chrome 155.0.8059.84,,,18-10-2026 21:59:16,18-10-2026 21:59:17,0.253s,PASSED
+"petstore.CartKeywords.verifyPrice(subTotalText, expectedPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:17,18-10-2026 21:59:17,0.000s,PASSED
+"click(findTestObject(""Page_Cart/btn_Remove"", [""itemId"":itemId]))",Chrome 155.0.8059.84,Step 4: remove item dari cart,,18-10-2026 21:59:17,18-10-2026 21:59:17,0.530s,PASSED
+"verifyElementPresent(findTestObject(""Page_Cart/txt_EmptyCart""), timeout)",Chrome 155.0.8059.84,Expected: cart kosong dan Sub Total kembali $0.00,,18-10-2026 21:59:17,18-10-2026 21:59:18,0.476s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Cart/link_CartItemId"", [""itemId"":itemId]), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:18,18-10-2026 21:59:18,0.260s,PASSED
+"petstore.CartKeywords.verifyPrice(getText(findTestObject(""Page_Cart/txt_SubTotal"")), ZERO)",Chrome 155.0.8059.84,,,18-10-2026 21:59:18,18-10-2026 21:59:18,0.265s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:59:18,18-10-2026 21:59:18,0.147s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:18,18-10-2026 21:59:18,0.001s,PASSED
+,,,,,,,
+Test Cases/Cart/TC06_Add_Item_To_Cart,Chrome 155.0.8059.84,"[POSITIVE][DDT] Tambah item ke cart dari halaman produk, verifikasi item, deskripsi, quantity, harga, sub total, lalu remove item hingga cart kosong. Data: Data Files/CartItemData.",ddt,18-10-2026 21:59:18,18-10-2026 21:59:26,8.168s,PASSED
+"DATA BINDING - {""itemId"":""EST-14"",""productId"":""FL-DSH-01"",""itemDescription"":""Tailless Manx"",""categoryId"":""CATS"",""productName"":""Manx"",""listPrice"":""$58.50""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:18,18-10-2026 21:59:18,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:59:18,18-10-2026 21:59:20,2.135s,PASSED
+"click(findTestObject(""Page_Header/link_QuickCategory"", [""categoryId"":categoryId]))",Chrome 155.0.8059.84,Step 1: pilih kategori melalui Quick Links di header,,18-10-2026 21:59:20,18-10-2026 21:59:21,0.524s,PASSED
+"click(findTestObject(""Page_Category/link_ProductId"", [""productId"":productId]))",Chrome 155.0.8059.84,Step 2: buka detail produk,,18-10-2026 21:59:21,18-10-2026 21:59:22,0.769s,PASSED
+"verifyElementText(findTestObject(""Page_Product/txt_ProductTitle""), productName)",Chrome 155.0.8059.84,,,18-10-2026 21:59:22,18-10-2026 21:59:22,0.459s,PASSED
+"click(findTestObject(""Page_Product/btn_AddToCart"", [""itemId"":itemId]))",Chrome 155.0.8059.84,Step 3: klik Add to Cart pada item yang dipilih,,18-10-2026 21:59:22,18-10-2026 21:59:23,0.557s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_CartTitle""), ""Shopping Cart"")",Chrome 155.0.8059.84,Expected: halaman Shopping Cart terbuka dan berisi item yang benar,,18-10-2026 21:59:23,18-10-2026 21:59:23,0.480s,PASSED
+"verifyElementPresent(findTestObject(""Page_Cart/link_CartItemId"", [""itemId"":itemId]), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:23,18-10-2026 21:59:24,0.266s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_ItemDescription"", [""itemId"":itemId]), itemDescription)",Chrome 155.0.8059.84,,,18-10-2026 21:59:24,18-10-2026 21:59:24,0.277s,PASSED
+"verifyElementAttributeValue(findTestObject(""Page_Cart/input_Quantity"", [""itemId"":itemId]), ""value"", ""1"", timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:24,18-10-2026 21:59:24,0.273s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_ListPrice"", [""itemId"":itemId]), listPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:24,18-10-2026 21:59:24,0.255s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_TotalCost"", [""itemId"":itemId]), listPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:24,18-10-2026 21:59:25,0.258s,PASSED
+expectedPrice = petstore.CartKeywords.parsePrice(listPrice),Chrome 155.0.8059.84,Expected: Sub Total = harga item (quantity 1),,18-10-2026 21:59:25,18-10-2026 21:59:25,0.000s,PASSED
+"subTotalText = getText(findTestObject(""Page_Cart/txt_SubTotal""))",Chrome 155.0.8059.84,,,18-10-2026 21:59:25,18-10-2026 21:59:25,0.250s,PASSED
+"petstore.CartKeywords.verifyPrice(subTotalText, expectedPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:25,18-10-2026 21:59:25,0.001s,PASSED
+"click(findTestObject(""Page_Cart/btn_Remove"", [""itemId"":itemId]))",Chrome 155.0.8059.84,Step 4: remove item dari cart,,18-10-2026 21:59:25,18-10-2026 21:59:25,0.531s,PASSED
+"verifyElementPresent(findTestObject(""Page_Cart/txt_EmptyCart""), timeout)",Chrome 155.0.8059.84,Expected: cart kosong dan Sub Total kembali $0.00,,18-10-2026 21:59:25,18-10-2026 21:59:26,0.447s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Cart/link_CartItemId"", [""itemId"":itemId]), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:26,18-10-2026 21:59:26,0.252s,PASSED
+"petstore.CartKeywords.verifyPrice(getText(findTestObject(""Page_Cart/txt_SubTotal"")), ZERO)",Chrome 155.0.8059.84,,,18-10-2026 21:59:26,18-10-2026 21:59:26,0.268s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:59:26,18-10-2026 21:59:26,0.151s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:26,18-10-2026 21:59:26,0.000s,PASSED
+,,,,,,,
+Test Cases/Cart/TC06_Add_Item_To_Cart,Chrome 155.0.8059.84,"[POSITIVE][DDT] Tambah item ke cart dari halaman produk, verifikasi item, deskripsi, quantity, harga, sub total, lalu remove item hingga cart kosong. Data: Data Files/CartItemData.",ddt,18-10-2026 21:59:27,18-10-2026 21:59:35,8.307s,PASSED
+"DATA BINDING - {""itemId"":""EST-11"",""productId"":""RP-SN-01"",""itemDescription"":""Venomless Rattlesnake"",""categoryId"":""REPTILES"",""productName"":""Rattlesnake"",""listPrice"":""$18.50""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:27,18-10-2026 21:59:27,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:59:27,18-10-2026 21:59:29,2.200s,PASSED
+"click(findTestObject(""Page_Header/link_QuickCategory"", [""categoryId"":categoryId]))",Chrome 155.0.8059.84,Step 1: pilih kategori melalui Quick Links di header,,18-10-2026 21:59:29,18-10-2026 21:59:29,0.580s,PASSED
+"click(findTestObject(""Page_Category/link_ProductId"", [""productId"":productId]))",Chrome 155.0.8059.84,Step 2: buka detail produk,,18-10-2026 21:59:29,18-10-2026 21:59:30,0.744s,PASSED
+"verifyElementText(findTestObject(""Page_Product/txt_ProductTitle""), productName)",Chrome 155.0.8059.84,,,18-10-2026 21:59:30,18-10-2026 21:59:31,0.459s,PASSED
+"click(findTestObject(""Page_Product/btn_AddToCart"", [""itemId"":itemId]))",Chrome 155.0.8059.84,Step 3: klik Add to Cart pada item yang dipilih,,18-10-2026 21:59:31,18-10-2026 21:59:31,0.549s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_CartTitle""), ""Shopping Cart"")",Chrome 155.0.8059.84,Expected: halaman Shopping Cart terbuka dan berisi item yang benar,,18-10-2026 21:59:31,18-10-2026 21:59:32,0.477s,PASSED
+"verifyElementPresent(findTestObject(""Page_Cart/link_CartItemId"", [""itemId"":itemId]), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:32,18-10-2026 21:59:32,0.264s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_ItemDescription"", [""itemId"":itemId]), itemDescription)",Chrome 155.0.8059.84,,,18-10-2026 21:59:32,18-10-2026 21:59:32,0.256s,PASSED
+"verifyElementAttributeValue(findTestObject(""Page_Cart/input_Quantity"", [""itemId"":itemId]), ""value"", ""1"", timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:32,18-10-2026 21:59:32,0.272s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_ListPrice"", [""itemId"":itemId]), listPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:32,18-10-2026 21:59:33,0.277s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_TotalCost"", [""itemId"":itemId]), listPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:33,18-10-2026 21:59:33,0.270s,PASSED
+expectedPrice = petstore.CartKeywords.parsePrice(listPrice),Chrome 155.0.8059.84,Expected: Sub Total = harga item (quantity 1),,18-10-2026 21:59:33,18-10-2026 21:59:33,0.000s,PASSED
+"subTotalText = getText(findTestObject(""Page_Cart/txt_SubTotal""))",Chrome 155.0.8059.84,,,18-10-2026 21:59:33,18-10-2026 21:59:33,0.271s,PASSED
+"petstore.CartKeywords.verifyPrice(subTotalText, expectedPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:33,18-10-2026 21:59:33,0.001s,PASSED
+"click(findTestObject(""Page_Cart/btn_Remove"", [""itemId"":itemId]))",Chrome 155.0.8059.84,Step 4: remove item dari cart,,18-10-2026 21:59:33,18-10-2026 21:59:34,0.538s,PASSED
+"verifyElementPresent(findTestObject(""Page_Cart/txt_EmptyCart""), timeout)",Chrome 155.0.8059.84,Expected: cart kosong dan Sub Total kembali $0.00,,18-10-2026 21:59:34,18-10-2026 21:59:34,0.449s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Cart/link_CartItemId"", [""itemId"":itemId]), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:34,18-10-2026 21:59:34,0.260s,PASSED
+"petstore.CartKeywords.verifyPrice(getText(findTestObject(""Page_Cart/txt_SubTotal"")), ZERO)",Chrome 155.0.8059.84,,,18-10-2026 21:59:34,18-10-2026 21:59:35,0.279s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:59:35,18-10-2026 21:59:35,0.149s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:35,18-10-2026 21:59:35,0.001s,PASSED
+,,,,,,,
+Test Cases/Cart/TC06_Add_Item_To_Cart,Chrome 155.0.8059.84,"[POSITIVE][DDT] Tambah item ke cart dari halaman produk, verifikasi item, deskripsi, quantity, harga, sub total, lalu remove item hingga cart kosong. Data: Data Files/CartItemData.",ddt,18-10-2026 21:59:35,18-10-2026 21:59:43,8.266s,PASSED
+"DATA BINDING - {""itemId"":""EST-18"",""productId"":""AV-CB-01"",""itemDescription"":""Adult Male Amazon Parrot"",""categoryId"":""BIRDS"",""productName"":""Amazon Parrot"",""listPrice"":""$193.50""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:35,18-10-2026 21:59:35,0.000s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama JPetStore,,18-10-2026 21:59:35,18-10-2026 21:59:37,2.269s,PASSED
+"click(findTestObject(""Page_Header/link_QuickCategory"", [""categoryId"":categoryId]))",Chrome 155.0.8059.84,Step 1: pilih kategori melalui Quick Links di header,,18-10-2026 21:59:37,18-10-2026 21:59:38,0.537s,PASSED
+"click(findTestObject(""Page_Category/link_ProductId"", [""productId"":productId]))",Chrome 155.0.8059.84,Step 2: buka detail produk,,18-10-2026 21:59:38,18-10-2026 21:59:38,0.762s,PASSED
+"verifyElementText(findTestObject(""Page_Product/txt_ProductTitle""), productName)",Chrome 155.0.8059.84,,,18-10-2026 21:59:38,18-10-2026 21:59:39,0.446s,PASSED
+"click(findTestObject(""Page_Product/btn_AddToCart"", [""itemId"":itemId]))",Chrome 155.0.8059.84,Step 3: klik Add to Cart pada item yang dipilih,,18-10-2026 21:59:39,18-10-2026 21:59:39,0.552s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_CartTitle""), ""Shopping Cart"")",Chrome 155.0.8059.84,Expected: halaman Shopping Cart terbuka dan berisi item yang benar,,18-10-2026 21:59:39,18-10-2026 21:59:40,0.472s,PASSED
+"verifyElementPresent(findTestObject(""Page_Cart/link_CartItemId"", [""itemId"":itemId]), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:40,18-10-2026 21:59:40,0.243s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_ItemDescription"", [""itemId"":itemId]), itemDescription)",Chrome 155.0.8059.84,,,18-10-2026 21:59:40,18-10-2026 21:59:40,0.260s,PASSED
+"verifyElementAttributeValue(findTestObject(""Page_Cart/input_Quantity"", [""itemId"":itemId]), ""value"", ""1"", timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:40,18-10-2026 21:59:41,0.259s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_ListPrice"", [""itemId"":itemId]), listPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:41,18-10-2026 21:59:41,0.238s,PASSED
+"verifyElementText(findTestObject(""Page_Cart/txt_TotalCost"", [""itemId"":itemId]), listPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:41,18-10-2026 21:59:41,0.272s,PASSED
+expectedPrice = petstore.CartKeywords.parsePrice(listPrice),Chrome 155.0.8059.84,Expected: Sub Total = harga item (quantity 1),,18-10-2026 21:59:41,18-10-2026 21:59:41,0.000s,PASSED
+"subTotalText = getText(findTestObject(""Page_Cart/txt_SubTotal""))",Chrome 155.0.8059.84,,,18-10-2026 21:59:41,18-10-2026 21:59:41,0.261s,PASSED
+"petstore.CartKeywords.verifyPrice(subTotalText, expectedPrice)",Chrome 155.0.8059.84,,,18-10-2026 21:59:41,18-10-2026 21:59:41,0.000s,PASSED
+"click(findTestObject(""Page_Cart/btn_Remove"", [""itemId"":itemId]))",Chrome 155.0.8059.84,Step 4: remove item dari cart,,18-10-2026 21:59:41,18-10-2026 21:59:42,0.553s,PASSED
+"verifyElementPresent(findTestObject(""Page_Cart/txt_EmptyCart""), timeout)",Chrome 155.0.8059.84,Expected: cart kosong dan Sub Total kembali $0.00,,18-10-2026 21:59:42,18-10-2026 21:59:42,0.459s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Cart/link_CartItemId"", [""itemId"":itemId]), timeout)",Chrome 155.0.8059.84,,,18-10-2026 21:59:42,18-10-2026 21:59:43,0.249s,PASSED
+"petstore.CartKeywords.verifyPrice(getText(findTestObject(""Page_Cart/txt_SubTotal"")), ZERO)",Chrome 155.0.8059.84,,,18-10-2026 21:59:43,18-10-2026 21:59:43,0.264s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:59:43,18-10-2026 21:59:43,0.157s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:43,18-10-2026 21:59:43,0.001s,PASSED
+,,,,,,,
+Test Cases/Cart/TC07_Update_Cart_Quantity,Chrome 155.0.8059.84,"[POSITIVE + NEGATIVE][DDT] Update quantity item di cart dengan nilai valid, nol, negatif, dan non-numerik. Verifikasi total dihitung ulang / item terhapus / input diabaikan. Data: Data Files/CartQuantityData.",ddt,18-10-2026 21:59:43,18-10-2026 21:59:50,7.180s,PASSED
+"DATA BINDING - {""itemId"":""EST-1"",""quantity"":""3"",""productId"":""FI-SW-01"",""scenario"":""Quantity valid"",""expectedResult"":""UPDATED"",""expectedQuantit..."":""3"",""categoryId"":""FISH"",""listPrice"":""$16.50""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:43,18-10-2026 21:59:43,0.000s,PASSED
+"petstore.CommonKeywords.logScenario(""TC07"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:59:43,18-10-2026 21:59:43,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama dan tambahkan 1 item ke cart,,18-10-2026 21:59:43,18-10-2026 21:59:45,2.114s,PASSED
+"petstore.CartKeywords.addItemToCart(categoryId, productId, itemId)",Chrome 155.0.8059.84,,,18-10-2026 21:59:45,18-10-2026 21:59:48,2.514s,PASSED
+"setText(findTestObject(""Page_Cart/input_Quantity"", [""itemId"":itemId]), quantity.toString())",Chrome 155.0.8059.84,Step 1: ubah quantity sesuai data,,18-10-2026 21:59:48,18-10-2026 21:59:49,0.615s,PASSED
+"click(findTestObject(""Page_Cart/btn_UpdateCart""))",Chrome 155.0.8059.84,Step 2: klik Update Cart,,18-10-2026 21:59:49,18-10-2026 21:59:49,0.528s,PASSED
+"if (expectedResult == ""REMOVED"")",Chrome 155.0.8059.84,,,18-10-2026 21:59:49,18-10-2026 21:59:49,0.000s,PASSED
+"else if (expectedResult == ""UPDATED"" || expectedResult == ""UNCHANGED"")",Chrome 155.0.8059.84,,,18-10-2026 21:59:49,18-10-2026 21:59:50,1.021s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:59:50,18-10-2026 21:59:50,0.159s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:50,18-10-2026 21:59:50,0.001s,PASSED
+,,,,,,,
+Test Cases/Cart/TC07_Update_Cart_Quantity,Chrome 155.0.8059.84,"[POSITIVE + NEGATIVE][DDT] Update quantity item di cart dengan nilai valid, nol, negatif, dan non-numerik. Verifikasi total dihitung ulang / item terhapus / input diabaikan. Data: Data Files/CartQuantityData.",ddt,18-10-2026 21:59:50,18-10-2026 21:59:57,6.797s,PASSED
+"DATA BINDING - {""itemId"":""EST-6"",""quantity"":""10"",""productId"":""K9-BD-01"",""scenario"":""Quantity besar"",""expectedResult"":""UPDATED"",""expectedQuantit..."":""10"",""categoryId"":""DOGS"",""listPrice"":""$18.50""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:50,18-10-2026 21:59:50,0.000s,PASSED
+"petstore.CommonKeywords.logScenario(""TC07"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:59:50,18-10-2026 21:59:50,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama dan tambahkan 1 item ke cart,,18-10-2026 21:59:50,18-10-2026 21:59:53,2.167s,PASSED
+"petstore.CartKeywords.addItemToCart(categoryId, productId, itemId)",Chrome 155.0.8059.84,,,18-10-2026 21:59:53,18-10-2026 21:59:55,2.438s,PASSED
+"setText(findTestObject(""Page_Cart/input_Quantity"", [""itemId"":itemId]), quantity.toString())",Chrome 155.0.8059.84,Step 1: ubah quantity sesuai data,,18-10-2026 21:59:55,18-10-2026 21:59:56,0.601s,PASSED
+"click(findTestObject(""Page_Cart/btn_UpdateCart""))",Chrome 155.0.8059.84,Step 2: klik Update Cart,,18-10-2026 21:59:56,18-10-2026 21:59:56,0.526s,PASSED
+"if (expectedResult == ""REMOVED"")",Chrome 155.0.8059.84,,,18-10-2026 21:59:56,18-10-2026 21:59:56,0.000s,PASSED
+"else if (expectedResult == ""UPDATED"" || expectedResult == ""UNCHANGED"")",Chrome 155.0.8059.84,,,18-10-2026 21:59:56,18-10-2026 21:59:57,0.911s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 21:59:57,18-10-2026 21:59:57,0.143s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:57,18-10-2026 21:59:57,0.001s,PASSED
+,,,,,,,
+Test Cases/Cart/TC07_Update_Cart_Quantity,Chrome 155.0.8059.84,"[POSITIVE + NEGATIVE][DDT] Update quantity item di cart dengan nilai valid, nol, negatif, dan non-numerik. Verifikasi total dihitung ulang / item terhapus / input diabaikan. Data: Data Files/CartQuantityData.",ddt,18-10-2026 21:59:57,18-10-2026 22:00:04,6.668s,PASSED
+"DATA BINDING - {""itemId"":""EST-1"",""quantity"":""0"",""productId"":""FI-SW-01"",""scenario"":""Quantity nol menghapus item"",""expectedResult"":""REMOVED"",""expectedQuantit..."":""0"",""categoryId"":""FISH"",""listPrice"":""$16.50""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 21:59:57,18-10-2026 21:59:57,0.000s,PASSED
+"petstore.CommonKeywords.logScenario(""TC07"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 21:59:57,18-10-2026 21:59:57,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama dan tambahkan 1 item ke cart,,18-10-2026 21:59:57,18-10-2026 21:59:59,2.102s,PASSED
+"petstore.CartKeywords.addItemToCart(categoryId, productId, itemId)",Chrome 155.0.8059.84,,,18-10-2026 21:59:59,18-10-2026 22:00:02,2.398s,PASSED
+"setText(findTestObject(""Page_Cart/input_Quantity"", [""itemId"":itemId]), quantity.toString())",Chrome 155.0.8059.84,Step 1: ubah quantity sesuai data,,18-10-2026 22:00:02,18-10-2026 22:00:02,0.563s,PASSED
+"click(findTestObject(""Page_Cart/btn_UpdateCart""))",Chrome 155.0.8059.84,Step 2: klik Update Cart,,18-10-2026 22:00:02,18-10-2026 22:00:03,0.518s,PASSED
+"if (expectedResult == ""REMOVED"")",Chrome 155.0.8059.84,,,18-10-2026 22:00:03,18-10-2026 22:00:04,0.919s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 22:00:04,18-10-2026 22:00:04,0.157s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 22:00:04,18-10-2026 22:00:04,0.001s,PASSED
+,,,,,,,
+Test Cases/Cart/TC07_Update_Cart_Quantity,Chrome 155.0.8059.84,"[POSITIVE + NEGATIVE][DDT] Update quantity item di cart dengan nilai valid, nol, negatif, dan non-numerik. Verifikasi total dihitung ulang / item terhapus / input diabaikan. Data: Data Files/CartQuantityData.",ddt,18-10-2026 22:00:04,18-10-2026 22:00:11,6.699s,PASSED
+"DATA BINDING - {""itemId"":""EST-14"",""quantity"":""-1"",""productId"":""FL-DSH-01"",""scenario"":""Quantity negatif menghapus item"",""expectedResult"":""REMOVED"",""expectedQuantit..."":""0"",""categoryId"":""CATS"",""listPrice"":""$58.50""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 22:00:04,18-10-2026 22:00:04,0.000s,PASSED
+"petstore.CommonKeywords.logScenario(""TC07"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 22:00:04,18-10-2026 22:00:04,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama dan tambahkan 1 item ke cart,,18-10-2026 22:00:04,18-10-2026 22:00:06,2.155s,PASSED
+"petstore.CartKeywords.addItemToCart(categoryId, productId, itemId)",Chrome 155.0.8059.84,,,18-10-2026 22:00:06,18-10-2026 22:00:08,2.432s,PASSED
+"setText(findTestObject(""Page_Cart/input_Quantity"", [""itemId"":itemId]), quantity.toString())",Chrome 155.0.8059.84,Step 1: ubah quantity sesuai data,,18-10-2026 22:00:08,18-10-2026 22:00:09,0.550s,PASSED
+"click(findTestObject(""Page_Cart/btn_UpdateCart""))",Chrome 155.0.8059.84,Step 2: klik Update Cart,,18-10-2026 22:00:09,18-10-2026 22:00:10,0.495s,PASSED
+"if (expectedResult == ""REMOVED"")",Chrome 155.0.8059.84,,,18-10-2026 22:00:10,18-10-2026 22:00:10,0.912s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 22:00:10,18-10-2026 22:00:11,0.142s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 22:00:11,18-10-2026 22:00:11,0.001s,PASSED
+,,,,,,,
+Test Cases/Cart/TC07_Update_Cart_Quantity,Chrome 155.0.8059.84,"[POSITIVE + NEGATIVE][DDT] Update quantity item di cart dengan nilai valid, nol, negatif, dan non-numerik. Verifikasi total dihitung ulang / item terhapus / input diabaikan. Data: Data Files/CartQuantityData.",ddt,18-10-2026 22:00:11,18-10-2026 22:00:18,6.976s,PASSED
+"DATA BINDING - {""itemId"":""EST-1"",""quantity"":""abc"",""productId"":""FI-SW-01"",""scenario"":""Quantity non-numerik diabaikan"",""expectedResult"":""UNCHANGED"",""expectedQuantit..."":""1"",""categoryId"":""FISH"",""listPrice"":""$16.50""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 22:00:11,18-10-2026 22:00:11,0.001s,PASSED
+"petstore.CommonKeywords.logScenario(""TC07"", scenario)",Chrome 155.0.8059.84,,,18-10-2026 22:00:11,18-10-2026 22:00:11,0.000s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama dan tambahkan 1 item ke cart,,18-10-2026 22:00:11,18-10-2026 22:00:13,2.287s,PASSED
+"petstore.CartKeywords.addItemToCart(categoryId, productId, itemId)",Chrome 155.0.8059.84,,,18-10-2026 22:00:13,18-10-2026 22:00:15,2.484s,PASSED
+"setText(findTestObject(""Page_Cart/input_Quantity"", [""itemId"":itemId]), quantity.toString())",Chrome 155.0.8059.84,Step 1: ubah quantity sesuai data,,18-10-2026 22:00:15,18-10-2026 22:00:16,0.547s,PASSED
+"click(findTestObject(""Page_Cart/btn_UpdateCart""))",Chrome 155.0.8059.84,Step 2: klik Update Cart,,18-10-2026 22:00:16,18-10-2026 22:00:16,0.290s,PASSED
+"if (expectedResult == ""REMOVED"")",Chrome 155.0.8059.84,,,18-10-2026 22:00:16,18-10-2026 22:00:16,0.000s,PASSED
+"else if (expectedResult == ""UPDATED"" || expectedResult == ""UNCHANGED"")",Chrome 155.0.8059.84,,,18-10-2026 22:00:16,18-10-2026 22:00:17,1.164s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 22:00:17,18-10-2026 22:00:18,0.158s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 22:00:18,18-10-2026 22:00:18,0.000s,PASSED
+,,,,,,,
+Test Cases/Checkout/TC08_Checkout_Without_Login,Chrome 155.0.8059.84,[NEGATIVE] Proceed to Checkout tanpa login. Verifikasi aplikasi menolak checkout dan mengarahkan user ke halaman Sign In.,,18-10-2026 22:00:18,18-10-2026 22:00:24,6.823s,PASSED
+"DATA BINDING - {""(Default) categ..."":""FISH"",""(Default) itemI..."":""EST-1"",""(Default) produ..."":""FI-SW-01""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 22:00:18,18-10-2026 22:00:18,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama tanpa login dan tambahkan item ke cart,,18-10-2026 22:00:18,18-10-2026 22:00:20,2.185s,PASSED
+"verifyElementPresent(findTestObject(""Page_Header/link_SignIn""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 22:00:20,18-10-2026 22:00:20,0.233s,PASSED
+"petstore.CartKeywords.addItemToCart(categoryId, productId, itemId)",Chrome 155.0.8059.84,,,18-10-2026 22:00:20,18-10-2026 22:00:23,2.457s,PASSED
+"click(findTestObject(""Page_Cart/btn_ProceedToCheckout""))",Chrome 155.0.8059.84,Step 1: klik Proceed to Checkout,,18-10-2026 22:00:23,18-10-2026 22:00:23,0.521s,PASSED
+"verifyElementVisible(findTestObject(""Page_Header/txt_Message""))",Chrome 155.0.8059.84,Expected: checkout ditolak dengan pesan wajib login dan user diarahkan ke halaman Sign In,,18-10-2026 22:00:23,18-10-2026 22:00:24,0.448s,PASSED
+"verifyMatch(getText(findTestObject(""Page_Header/txt_Message"")), ""^You must sign on before attempting to check out.*"", true)",Chrome 155.0.8059.84,,,18-10-2026 22:00:24,18-10-2026 22:00:24,0.232s,PASSED
+"verifyElementPresent(findTestObject(""Page_Login/btn_Login""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 22:00:24,18-10-2026 22:00:24,0.226s,PASSED
+"verifyElementNotPresent(findTestObject(""Page_Checkout/btn_Continue""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 22:00:24,18-10-2026 22:00:24,0.233s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 22:00:24,18-10-2026 22:00:24,0.162s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 22:00:24,18-10-2026 22:00:24,0.001s,PASSED
+,,,,,,,
+Test Cases/Checkout/TC09_Checkout_Order_Success,Chrome 155.0.8059.84,[POSITIVE][E2E] Login (Global Variable) -> tambah item ke cart -> checkout -> confirm order. Verifikasi pesan order berhasil dan item ada di detail order.,,18-10-2026 22:00:24,18-10-2026 22:00:38,13.246s,PASSED
+"DATA BINDING - {""(Default) categ..."":""DOGS"",""(Default) itemI..."":""EST-6"",""(Default) produ..."":""K9-BD-01""}",,,,,,,
+Start listener action : beforeTestCase,Chrome 155.0.8059.84,,,18-10-2026 22:00:24,18-10-2026 22:00:24,0.001s,PASSED
+petstore.CommonKeywords.openHomePage(),Chrome 155.0.8059.84,Precondition: buka halaman utama dan login dengan credential dari Global Variable,,18-10-2026 22:00:25,18-10-2026 22:00:27,2.197s,PASSED
+"petstore.CommonKeywords.login(username, password)",Chrome 155.0.8059.84,,,18-10-2026 22:00:27,18-10-2026 22:00:30,2.820s,PASSED
+"petstore.CommonKeywords.verifyLoggedIn("""")",Chrome 155.0.8059.84,,,18-10-2026 22:00:30,18-10-2026 22:00:30,0.685s,PASSED
+"petstore.CartKeywords.addItemToCart(categoryId, productId, itemId)",Chrome 155.0.8059.84,Step 1: tambahkan item ke cart,,18-10-2026 22:00:30,18-10-2026 22:00:33,2.450s,PASSED
+"click(findTestObject(""Page_Cart/btn_ProceedToCheckout""))",Chrome 155.0.8059.84,Step 2: klik Proceed to Checkout,,18-10-2026 22:00:33,18-10-2026 22:00:33,0.507s,PASSED
+"verifyElementPresent(findTestObject(""Page_Checkout/select_CardType""), timeout)",Chrome 155.0.8059.84,Expected: form Payment Details & Billing Address tampil,,18-10-2026 22:00:33,18-10-2026 22:00:34,0.451s,PASSED
+"verifyElementPresent(findTestObject(""Page_Checkout/input_CardNumber""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 22:00:34,18-10-2026 22:00:34,0.248s,PASSED
+"verifyElementPresent(findTestObject(""Page_Checkout/input_ExpiryDate""), timeout)",Chrome 155.0.8059.84,,,18-10-2026 22:00:34,18-10-2026 22:00:34,0.234s,PASSED
+"click(findTestObject(""Page_Checkout/btn_Continue""))",Chrome 155.0.8059.84,Step 3: klik Continue,,18-10-2026 22:00:34,18-10-2026 22:00:35,0.516s,PASSED
+"verifyElementPresent(findTestObject(""Page_Checkout/btn_Confirm""), timeout)",Chrome 155.0.8059.84,Step 4: klik Confirm pada halaman konfirmasi order,,18-10-2026 22:00:35,18-10-2026 22:00:35,0.444s,PASSED
+"click(findTestObject(""Page_Checkout/btn_Confirm""))",Chrome 155.0.8059.84,,,18-10-2026 22:00:35,18-10-2026 22:00:36,0.532s,PASSED
+"verifyMatch(getText(findTestObject(""Page_Header/txt_Message"")), ""^Thank you, your order has been submitted.*"", true)",Chrome 155.0.8059.84,Expected: order berhasil dibuat dan item tercantum di detail order,,18-10-2026 22:00:36,18-10-2026 22:00:36,0.449s,PASSED
+"verifyElementPresent(findTestObject(""Page_Checkout/link_OrderItemId"", [""itemId"":itemId]), timeout)",Chrome 155.0.8059.84,,,18-10-2026 22:00:36,18-10-2026 22:00:36,0.226s,PASSED
+petstore.CommonKeywords.logout(),Chrome 155.0.8059.84,Step 5: logout,,18-10-2026 22:00:36,18-10-2026 22:00:38,1.203s,PASSED
+closeBrowser(),Chrome 155.0.8059.84,,,18-10-2026 22:00:38,18-10-2026 22:00:38,0.149s,PASSED
+Start listener action : afterTestCase,Chrome 155.0.8059.84,,,18-10-2026 22:00:38,18-10-2026 22:00:38,0.001s,PASSED
+,,,,,,,
+Start listener action : afterTestSuite,Chrome 155.0.8059.84,,,18-10-2026 22:00:38,18-10-2026 22:00:38,0.001s,PASSED

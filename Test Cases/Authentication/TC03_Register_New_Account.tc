@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>[POSITIVE][DYNAMIC DATA] Registrasi akun baru dengan data yang di-generate otomatis (username unik per eksekusi), verifikasi auto-login, logout, lalu login ulang dengan akun baru.</description>
+   <name>TC03_Register_New_Account</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1cf4b6be-d2a8-4b89-b93a-6a9622d922ab</testCaseGuid>
+</TestCaseEntity>

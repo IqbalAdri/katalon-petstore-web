@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>[NEGATIVE] Proceed to Checkout tanpa login. Verifikasi aplikasi menolak checkout dan mengarahkan user ke halaman Sign In.</description>
+   <name>TC08_Checkout_Without_Login</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b18f4d5f-6b5f-4e19-bfc9-8f3176ddb601</testCaseGuid>
+   <variable>
+      <defaultValue>'FISH'</defaultValue>
+      <description>ID kategori</description>
+      <id>e285c2a8-cfb1-4755-95f8-037bb1c273c9</id>
+      <masked>false</masked>
+      <name>categoryId</name>
+   </variable>
+   <variable>
+      <defaultValue>'FI-SW-01'</defaultValue>
+      <description>Product ID</description>
+      <id>64f10207-56aa-42b2-97fc-c52182377760</id>
+      <masked>false</masked>
+      <name>productId</name>
+   </variable>
+   <variable>
+      <defaultValue>'EST-1'</defaultValue>
+      <description>Item ID</description>
+      <id>daff5790-113b-4b69-b3b5-32f148e92da9</id>
+      <masked>false</masked>
+      <name>itemId</name>
+   </variable>
+</TestCaseEntity>

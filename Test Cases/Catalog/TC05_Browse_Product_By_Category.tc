@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>[POSITIVE][DDT] Navigasi kategori dari sidebar halaman utama, verifikasi judul kategori &amp; produk, lalu buka detail produk. Data: Data Files/CategoryData.</description>
+   <name>TC05_Browse_Product_By_Category</name>
+   <tag>ddt</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1217f74f-3da2-4b20-8d6a-513f435b6f98</testCaseGuid>
+   <variable>
+      <defaultValue>'FISH'</defaultValue>
+      <description>ID kategori</description>
+      <id>d8e739e7-5566-4f00-8360-78f6c87846a3</id>
+      <masked>false</masked>
+      <name>categoryId</name>
+   </variable>
+   <variable>
+      <defaultValue>'Fish'</defaultValue>
+      <description>Judul kategori yang diharapkan</description>
+      <id>43a140df-0cdb-481b-941f-c850710a4688</id>
+      <masked>false</masked>
+      <name>categoryName</name>
+   </variable>
+   <variable>
+      <defaultValue>'FI-SW-01'</defaultValue>
+      <description>Product ID yang dicek</description>
+      <id>7ad92385-393e-4cb9-b1b1-4a2e9d6e29a1</id>
+      <masked>false</masked>
+      <name>productId</name>
+   </variable>
+   <variable>
+      <defaultValue>'Angelfish'</defaultValue>
+      <description>Nama produk yang diharapkan</description>
+      <id>1d218da2-725c-4d2a-99a7-66f8bf9f8ff1</id>
+      <masked>false</masked>
+      <name>productName</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,14 @@
+# Katalon generated / build output
+.gradle
+bin
+Libs
+output
+!output/.gitkeep
+build
+.classpath
+.project
+.settings
+.cache
+
+# Hasil eksekusi lokal (salin report yang ingin dipublikasikan ke docs/execution-report)
+Reports

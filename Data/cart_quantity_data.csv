@@ -1,0 +1,6 @@
+scenario,categoryId,productId,itemId,listPrice,quantity,expectedResult,expectedQuantity
+Quantity valid,FISH,FI-SW-01,EST-1,$16.50,3,UPDATED,3
+Quantity besar,DOGS,K9-BD-01,EST-6,$18.50,10,UPDATED,10
+Quantity nol menghapus item,FISH,FI-SW-01,EST-1,$16.50,0,REMOVED,0
+Quantity negatif menghapus item,CATS,FL-DSH-01,EST-14,$58.50,-1,REMOVED,0
+Quantity non-numerik diabaikan,FISH,FI-SW-01,EST-1,$16.50,abc,UNCHANGED,1

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>[POSITIVE][DDT] Tambah item ke cart dari halaman produk, verifikasi item, deskripsi, quantity, harga, sub total, lalu remove item hingga cart kosong. Data: Data Files/CartItemData.</description>
+   <name>TC06_Add_Item_To_Cart</name>
+   <tag>ddt</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fd7ca43b-a603-4eab-80cb-2aaee4eccf27</testCaseGuid>
+   <variable>
+      <defaultValue>'FISH'</defaultValue>
+      <description>ID kategori</description>
+      <id>63c35998-8cfe-4be2-af52-f4bd8621ebc0</id>
+      <masked>false</masked>
+      <name>categoryId</name>
+   </variable>
+   <variable>
+      <defaultValue>'FI-SW-01'</defaultValue>
+      <description>Product ID</description>
+      <id>4fe3bd7b-bda6-4569-8d83-04afa9ebdbcf</id>
+      <masked>false</masked>
+      <name>productId</name>
+   </variable>
+   <variable>
+      <defaultValue>'Angelfish'</defaultValue>
+      <description>Nama produk</description>
+      <id>9b4e6492-7759-4bff-832c-8ccd7d52dd56</id>
+      <masked>false</masked>
+      <name>productName</name>
+   </variable>
+   <variable>
+      <defaultValue>'EST-1'</defaultValue>
+      <description>Item ID yang ditambahkan ke cart</description>
+      <id>f33f57d4-ab92-4586-aab9-b34237054598</id>
+      <masked>false</masked>
+      <name>itemId</name>
+   </variable>
+   <variable>
+      <defaultValue>'Large Angelfish'</defaultValue>
+      <description>Deskripsi item di cart</description>
+      <id>3e6f3aa1-d794-48b0-8e5d-488c6632ea8b</id>
+      <masked>false</masked>
+      <name>itemDescription</name>
+   </variable>
+   <variable>
+      <defaultValue>'$16.50'</defaultValue>
+      <description>Harga item</description>
+      <id>b7f380a8-3f20-4e3c-9574-b91284970e6c</id>
+      <masked>false</masked>
+      <name>listPrice</name>
+   </variable>
+</TestCaseEntity>

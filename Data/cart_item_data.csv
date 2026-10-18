@@ -1,0 +1,6 @@
+categoryId,productId,productName,itemId,itemDescription,listPrice
+FISH,FI-SW-01,Angelfish,EST-1,Large Angelfish,$16.50
+DOGS,K9-BD-01,Bulldog,EST-6,Male Adult Bulldog,$18.50
+CATS,FL-DSH-01,Manx,EST-14,Tailless Manx,$58.50
+REPTILES,RP-SN-01,Rattlesnake,EST-11,Venomless Rattlesnake,$18.50
+BIRDS,AV-CB-01,Amazon Parrot,EST-18,Adult Male Amazon Parrot,$193.50

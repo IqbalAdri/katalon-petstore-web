@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>[POSITIVE + NEGATIVE][DDT] Update quantity item di cart dengan nilai valid, nol, negatif, dan non-numerik. Verifikasi total dihitung ulang / item terhapus / input diabaikan. Data: Data Files/CartQuantityData.</description>
+   <name>TC07_Update_Cart_Quantity</name>
+   <tag>ddt</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3f16bd63-ba97-494e-9d3a-f03fe5a5c47b</testCaseGuid>
+   <variable>
+      <defaultValue>'Quantity valid'</defaultValue>
+      <description>Nama skenario</description>
+      <id>2acf2ca6-65be-49db-8642-62ebb488ec68</id>
+      <masked>false</masked>
+      <name>scenario</name>
+   </variable>
+   <variable>
+      <defaultValue>'FISH'</defaultValue>
+      <description>ID kategori</description>
+      <id>193f131b-93ca-4bc8-9dc8-e455fbd8a2cd</id>
+      <masked>false</masked>
+      <name>categoryId</name>
+   </variable>
+   <variable>
+      <defaultValue>'FI-SW-01'</defaultValue>
+      <description>Product ID</description>
+      <id>8e2b46f1-9e87-4991-9742-16cbc39f50e4</id>
+      <masked>false</masked>
+      <name>productId</name>
+   </variable>
+   <variable>
+      <defaultValue>'EST-1'</defaultValue>
+      <description>Item ID</description>
+      <id>877b0bd9-2040-4d24-8a40-0476de5999b8</id>
+      <masked>false</masked>
+      <name>itemId</name>
+   </variable>
+   <variable>
+      <defaultValue>'$16.50'</defaultValue>
+      <description>Harga satuan item</description>
+      <id>5930d3a7-5f66-4e7b-926a-25f53ce511fd</id>
+      <masked>false</masked>
+      <name>listPrice</name>
+   </variable>
+   <variable>
+      <defaultValue>'3'</defaultValue>
+      <description>Nilai quantity yang diinput</description>
+      <id>52347350-8ded-4a37-aec8-5cf318190c99</id>
+      <masked>false</masked>
+      <name>quantity</name>
+   </variable>
+   <variable>
+      <defaultValue>'UPDATED'</defaultValue>
+      <description>UPDATED | REMOVED | UNCHANGED</description>
+      <id>b78d1d89-2d75-4397-a165-ec06659be4fa</id>
+      <masked>false</masked>
+      <name>expectedResult</name>
+   </variable>
+   <variable>
+      <defaultValue>'3'</defaultValue>
+      <description>Quantity yang diharapkan setelah Update Cart</description>
+      <id>c4d4e524-a1e7-4bc7-beec-81b75691338f</id>
+      <masked>false</masked>
+      <name>expectedQuantity</name>
+   </variable>
+</TestCaseEntity>

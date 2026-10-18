@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>[POSITIVE][E2E] Login (Global Variable) -&gt; tambah item ke cart -&gt; checkout -&gt; confirm order. Verifikasi pesan order berhasil dan item ada di detail order.</description>
+   <name>TC09_Checkout_Order_Success</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>239069c4-770c-4c98-abaa-e1a64a4b8d0d</testCaseGuid>
+   <variable>
+      <defaultValue>'DOGS'</defaultValue>
+      <description>ID kategori</description>
+      <id>7d70f214-a837-40b6-9317-71e83b111987</id>
+      <masked>false</masked>
+      <name>categoryId</name>
+   </variable>
+   <variable>
+      <defaultValue>'K9-BD-01'</defaultValue>
+      <description>Product ID</description>
+      <id>b6470c64-34fa-4493-b4b6-fe32cceb5ea5</id>
+      <masked>false</masked>
+      <name>productId</name>
+   </variable>
+   <variable>
+      <defaultValue>'EST-6'</defaultValue>
+      <description>Item ID</description>
+      <id>68bee109-7e23-4dc6-a717-1da632959945</id>
+      <masked>false</masked>
+      <name>itemId</name>
+   </variable>
+</TestCaseEntity>

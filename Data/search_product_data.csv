@@ -1,0 +1,8 @@
+scenario,keyword,expectedResult,expectedProducts
+Keyword valid huruf kecil,fish,FOUND,Angelfish;Goldfish
+Keyword valid huruf besar (case-insensitive),FISH,FOUND,Angelfish;Goldfish
+Keyword sebagian nama produk,Retriever,FOUND,Golden Retriever;Labrador Retriever
+Keyword satu produk,dog,FOUND,Bulldog
+Keyword tidak terdaftar,xyz123,NOT_FOUND,{EMPTY}
+Keyword karakter spesial,<script>,NOT_FOUND,{EMPTY}
+Keyword kosong,{EMPTY},EMPTY_KEYWORD,{EMPTY}
